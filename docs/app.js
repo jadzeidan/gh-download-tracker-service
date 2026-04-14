@@ -20,6 +20,9 @@ const releaseFilterEl = document.querySelector("#release-filter");
 const platformFilterEl = document.querySelector("#platform-filter");
 const historySummaryEl = document.querySelector("#history-summary");
 const currentTableEl = document.querySelector("#current-table");
+const platformHistoryChartEl = document.querySelector("#platform-history-chart");
+const platformHistoryLegendEl = document.querySelector("#platform-history-legend");
+const platformHistorySummaryEl = document.querySelector("#platform-history-summary");
 const historyChartEl = document.querySelector("#history-chart");
 const chartLegendEl = document.querySelector("#chart-legend");
 const filtersFormEl = document.querySelector("#filters-form");
@@ -121,6 +124,30 @@ function buildHistoryFromStore(assetSnapshots) {
       }
 
       return right.releasePublishedAt.localeCompare(left.releasePublishedAt);
+    }
+
+    return left.syncedAt.localeCompare(right.syncedAt);
+  });
+}
+
+function buildPlatformTrendFromStore(assetSnapshots) {
+  const grouped = new Map();
+
+  for (const snapshot of assetSnapshots) {
+    const key = `${snapshot.syncedAt}:${snapshot.platform}`;
+    const existing = grouped.get(key) ?? {
+      syncedAt: snapshot.syncedAt,
+      platform: snapshot.platform,
+      totalDownloads: 0
+    };
+
+    existing.totalDownloads += snapshot.downloadCount;
+    grouped.set(key, existing);
+  }
+
+  return Array.from(grouped.values()).sort((left, right) => {
+    if (left.syncedAt === right.syncedAt) {
+      return left.platform.localeCompare(right.platform);
     }
 
     return left.syncedAt.localeCompare(right.syncedAt);
@@ -244,36 +271,48 @@ function summarizeHistory(items) {
     `Latest point: ${latest.releaseTag} ${latest.platform} at ${formatNumber(latest.totalDownloads)}.`;
 }
 
-function renderLegend(keys) {
-  chartLegendEl.innerHTML = keys
+function summarizePlatformTrend(items) {
+  if (!items.length) {
+    platformHistorySummaryEl.textContent = "No platform trend data available yet.";
+    return;
+  }
+
+  const syncRuns = new Set(items.map((item) => item.syncedAt)).size;
+  const latestSync = items[items.length - 1].syncedAt;
+  const latestRows = items.filter((item) => item.syncedAt === latestSync);
+  const leader = [...latestRows].sort((left, right) => right.totalDownloads - left.totalDownloads)[0];
+
+  platformHistorySummaryEl.textContent =
+    `Aggregated platform totals across ${syncRuns} sync run${syncRuns === 1 ? "" : "s"}. ` +
+    `Latest leader: ${leader.platform} with ${formatNumber(leader.totalDownloads)} downloads.`;
+}
+
+function renderLegend(container, keys, formatter) {
+  container.innerHTML = keys
     .map(
       (key) => `
         <span class="legend-item">
           <span class="legend-swatch" style="background:${platformColors[key.platform] ?? "#6c5a45"}"></span>
-          ${key.releaseTag} · ${key.platform}
+          ${formatter(key)}
         </span>
       `
     )
     .join("");
 }
 
-function renderHistoryChart(data) {
-  const items = getFilteredHistory(data);
-  summarizeHistory(items);
-
+function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter }) {
   if (!items.length) {
-    historyChartEl.innerHTML = "";
-    chartLegendEl.innerHTML = "";
+    svgEl.innerHTML = "";
+    legendEl.innerHTML = "";
     return;
   }
 
   const pointsBySeries = new Map();
 
   for (const item of items) {
-    const key = `${item.releaseTag}:${item.platform}`;
+    const key = seriesKey(item);
     const series = pointsBySeries.get(key) ?? {
-      releaseTag: item.releaseTag,
-      platform: item.platform,
+      ...item,
       points: []
     };
 
@@ -282,11 +321,11 @@ function renderHistoryChart(data) {
   }
 
   const seriesList = Array.from(pointsBySeries.values()).sort((left, right) => {
-    if (left.releaseTag === right.releaseTag) {
-      return left.platform.localeCompare(right.platform);
+    if (left.platform === right.platform) {
+      return (right.releaseTag ?? "").localeCompare(left.releaseTag ?? "");
     }
 
-    return right.releaseTag.localeCompare(left.releaseTag);
+    return left.platform.localeCompare(right.platform);
   });
 
   const allPoints = seriesList.flatMap((series) => series.points);
@@ -336,10 +375,7 @@ function renderHistoryChart(data) {
       const path = sortedPoints
         .map((point, index) => {
           const x = padding.left + xStep * syncLabels.indexOf(point.syncedAt);
-          const y =
-            padding.top +
-            plotHeight -
-            (point.totalDownloads / maxDownloads) * plotHeight;
+          const y = padding.top + plotHeight - (point.totalDownloads / maxDownloads) * plotHeight;
 
           return `${index === 0 ? "M" : "L"} ${x} ${y}`;
         })
@@ -348,10 +384,7 @@ function renderHistoryChart(data) {
       const dots = sortedPoints
         .map((point) => {
           const x = padding.left + xStep * syncLabels.indexOf(point.syncedAt);
-          const y =
-            padding.top +
-            plotHeight -
-            (point.totalDownloads / maxDownloads) * plotHeight;
+          const y = padding.top + plotHeight - (point.totalDownloads / maxDownloads) * plotHeight;
 
           return `<circle class="chart-dot" cx="${x}" cy="${y}" r="4.5" fill="${platformColors[series.platform] ?? "#6c5a45"}"></circle>`;
         })
@@ -364,7 +397,7 @@ function renderHistoryChart(data) {
     })
     .join("");
 
-  historyChartEl.innerHTML = `
+  svgEl.innerHTML = `
     <line class="chart-axis" x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height - padding.bottom}"></line>
     <line class="chart-axis" x1="${padding.left}" y1="${height - padding.bottom}" x2="${width - padding.right}" y2="${height - padding.bottom}"></line>
     ${gridMarkup}
@@ -372,7 +405,30 @@ function renderHistoryChart(data) {
     ${xAxisLabels}
   `;
 
-  renderLegend(seriesList.map(({ releaseTag, platform }) => ({ releaseTag, platform })));
+  renderLegend(legendEl, seriesList, legendFormatter);
+}
+
+function renderPlatformHistoryChart(data) {
+  summarizePlatformTrend(data.platformTrend);
+  renderLineChart({
+    svgEl: platformHistoryChartEl,
+    legendEl: platformHistoryLegendEl,
+    items: data.platformTrend,
+    seriesKey: (item) => item.platform,
+    legendFormatter: (item) => item.platform
+  });
+}
+
+function renderHistoryChart(data) {
+  const items = getFilteredHistory(data);
+  summarizeHistory(items);
+  renderLineChart({
+    svgEl: historyChartEl,
+    legendEl: chartLegendEl,
+    items,
+    seriesKey: (item) => `${item.releaseTag}:${item.platform}`,
+    legendFormatter: (item) => `${item.releaseTag} - ${item.platform}`
+  });
 }
 
 function renderDashboard(data) {
@@ -384,6 +440,7 @@ function renderDashboard(data) {
   populateFilters(data);
   renderPlatformCards(data);
   renderBarList(data);
+  renderPlatformHistoryChart(data);
   renderCurrentTable(data);
   renderHistoryChart(data);
 }
@@ -402,6 +459,7 @@ async function loadDashboard() {
       syncRuns: rawStore.syncRuns,
       current: buildCurrentFromStore(rawStore.assetSnapshots),
       platformTotals: buildPlatformTotalsFromStore(rawStore.assetSnapshots),
+      platformTrend: buildPlatformTrendFromStore(rawStore.assetSnapshots),
       history: buildHistoryFromStore(rawStore.assetSnapshots)
     };
 
@@ -410,6 +468,9 @@ async function loadDashboard() {
     platformGridEl.innerHTML = createStatus(`Could not load dashboard data. ${error.message}`);
     barListEl.innerHTML = "";
     currentTableEl.innerHTML = "";
+    platformHistoryChartEl.innerHTML = "";
+    platformHistoryLegendEl.innerHTML = "";
+    platformHistorySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
     historyChartEl.innerHTML = "";
     chartLegendEl.innerHTML = "";
     historySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
