@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
+    "publish:pages-data": "node scripts/publish-pages-data.js",
     "sync": "node scripts/sync.js",
     "test": "node --test"
   },

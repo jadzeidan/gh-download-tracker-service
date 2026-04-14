@@ -10,6 +10,9 @@ export const config = {
   dataFilePath: process.env.DATA_FILE_PATH
     ? path.resolve(process.env.DATA_FILE_PATH)
     : path.join(rootDir, "data", "downloads.json"),
+  pagesDataFilePath: process.env.PAGES_DATA_FILE_PATH
+    ? path.resolve(process.env.PAGES_DATA_FILE_PATH)
+    : path.join(rootDir, "docs", "data", "downloads.json"),
   autoSyncOnStartup: process.env.AUTO_SYNC_ON_STARTUP === "true"
 };
 

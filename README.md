@@ -1,6 +1,6 @@
 # BitBoxApp Download Tracker Service
 
-This service collects GitHub release download counts for BitBoxApp and stores them as time-series snapshots so you can build a dashboard later.
+This project collects GitHub release download counts for BitBoxApp and stores them as time-series snapshots for both a local API and a GitHub Pages dashboard.
 
 It tracks these user-facing platforms:
 
@@ -21,7 +21,20 @@ Each sync stores one snapshot row per matching release asset with:
 - distribution type such as `dmg`, `exe`, `deb`, `rpm`, `appimage`, or `apk`
 - current GitHub `download_count`
 
-Linux download counts are stored at distribution level and aggregated to `linux` in the API.
+Linux download counts are stored at distribution level and aggregated to `linux` in the API and dashboard.
+
+## Dashboard
+
+A static dashboard lives in [docs/index.html](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/index.html).
+
+It reads [docs/data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/data/downloads.json) and shows:
+
+- current totals by platform
+- a platform leaderboard
+- release-by-release totals
+- history over sync runs
+
+This is GitHub Pages-friendly because it is plain HTML, CSS, JavaScript, and JSON.
 
 ## API
 
@@ -64,6 +77,7 @@ Environment variables:
 - `GITHUB_REPO_OWNER`: default `BitBoxSwiss`
 - `GITHUB_REPO_NAME`: default `bitbox-wallet-app`
 - `DATA_FILE_PATH`: optional custom JSON storage path
+- `PAGES_DATA_FILE_PATH`: optional custom Pages JSON output path
 - `AUTO_SYNC_ON_STARTUP`: set to `true` to fetch immediately when the server boots
 
 ## Running
@@ -84,6 +98,12 @@ Run tests:
 npm test
 ```
 
+Publish the Pages data file from the local store:
+
+```bash
+npm run publish:pages-data
+```
+
 ## Scheduled Syncing
 
 The repo now includes a GitHub Actions workflow at [.github/workflows/sync-downloads.yml](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/.github/workflows/sync-downloads.yml) that:
@@ -91,20 +111,19 @@ The repo now includes a GitHub Actions workflow at [.github/workflows/sync-downl
 - runs hourly
 - can also be triggered manually with `workflow_dispatch`
 - executes `npm run sync`
-- commits the updated [data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/data/downloads.json) back into the repository when values change
+- updates both [data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/data/downloads.json) and [docs/data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/data/downloads.json)
+- commits the updated snapshot files back into the repository when values change
 
 This gives you a simple time-series store without needing a separate database on day one.
+
+## GitHub Pages Setup
+
+You can host the dashboard on GitHub Pages by serving the `docs/` directory from your default branch.
+
+Once enabled, the dashboard will load `./data/downloads.json` directly from the Pages site.
 
 If you want better long-term scalability later, the clean upgrade path is:
 
 - keep the sync logic
 - replace JSON file storage with SQLite or Postgres
 - point the dashboard at the database-backed API
-
-## Suggested Next Step
-
-Once this collector is running on a schedule, the next natural step is a tiny dashboard app that charts:
-
-- downloads per platform per release
-- growth of a release over time
-- total current downloads by platform

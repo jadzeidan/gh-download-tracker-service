@@ -1,11 +1,10 @@
+import { initializeStore } from "../src/service.js";
 import { publishPagesData } from "../src/pages-data.js";
-import { initializeStore, runSync } from "../src/service.js";
 
 async function main() {
   await initializeStore();
-  const result = await runSync();
   await publishPagesData();
-  console.log(JSON.stringify(result, null, 2));
+  console.log("Published dashboard data to docs/data/downloads.json");
 }
 
 main().catch((error) => {

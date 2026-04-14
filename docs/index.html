@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BitBoxApp Downloads</title>
+    <meta
+      name="description"
+      content="BitBoxApp release download dashboard for Windows, macOS, Linux, and Android."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">BitBoxApp release metrics</p>
+          <h1>Downloads by platform, release, and time.</h1>
+          <p class="hero-text">
+            A static dashboard powered by scheduled GitHub release snapshots.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-card">
+            <span class="meta-label">Repository</span>
+            <strong id="repo-name">Loading...</strong>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">Latest sync</span>
+            <strong id="latest-sync">Loading...</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Snapshot</p>
+              <h2>Current totals by platform</h2>
+            </div>
+          </div>
+          <div class="platform-grid" id="platform-grid"></div>
+        </section>
+
+        <section class="split">
+          <section class="card">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Momentum</p>
+                <h2>Platform leaderboard</h2>
+              </div>
+            </div>
+            <div class="bar-list" id="bar-list"></div>
+          </section>
+
+          <section class="card">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Filters</p>
+                <h2>History focus</h2>
+              </div>
+            </div>
+            <form class="filters" id="filters-form">
+              <label>
+                Platform
+                <select id="platform-filter">
+                  <option value="">All platforms</option>
+                </select>
+              </label>
+              <label>
+                Release
+                <select id="release-filter">
+                  <option value="">All releases</option>
+                </select>
+              </label>
+            </form>
+            <div class="mini-stat" id="history-summary">Loading history...</div>
+          </section>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Trend</p>
+              <h2>Download history over sync runs</h2>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <svg id="history-chart" viewBox="0 0 880 320" role="img" aria-label="Download history chart"></svg>
+          </div>
+          <div class="chart-legend" id="chart-legend"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Releases</p>
+              <h2>Latest totals per release and platform</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Release</th>
+                  <th>Published</th>
+                  <th>Platform</th>
+                  <th>Total downloads</th>
+                  <th>Breakdown</th>
+                </tr>
+              </thead>
+              <tbody id="current-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
