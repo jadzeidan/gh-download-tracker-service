@@ -272,6 +272,10 @@ function summarizeHistory(items) {
 }
 
 function summarizePlatformTrend(items) {
+  if (!platformHistorySummaryEl) {
+    return;
+  }
+
   if (!items.length) {
     platformHistorySummaryEl.textContent = "No platform trend data available yet.";
     return;
@@ -288,6 +292,10 @@ function summarizePlatformTrend(items) {
 }
 
 function renderLegend(container, keys, formatter) {
+  if (!container) {
+    return;
+  }
+
   container.innerHTML = keys
     .map(
       (key) => `
@@ -301,6 +309,10 @@ function renderLegend(container, keys, formatter) {
 }
 
 function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter }) {
+  if (!svgEl || !legendEl) {
+    return;
+  }
+
   if (!items.length) {
     svgEl.innerHTML = "";
     legendEl.innerHTML = "";
@@ -409,6 +421,10 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
 }
 
 function renderPlatformHistoryChart(data) {
+  if (!platformHistoryChartEl || !platformHistoryLegendEl || !platformHistorySummaryEl) {
+    return;
+  }
+
   summarizePlatformTrend(data.platformTrend);
   renderLineChart({
     svgEl: platformHistoryChartEl,
@@ -440,9 +456,9 @@ function renderDashboard(data) {
   populateFilters(data);
   renderPlatformCards(data);
   renderBarList(data);
-  renderPlatformHistoryChart(data);
   renderCurrentTable(data);
   renderHistoryChart(data);
+  renderPlatformHistoryChart(data);
 }
 
 async function loadDashboard() {
@@ -465,15 +481,35 @@ async function loadDashboard() {
 
     renderDashboard(dashboardData);
   } catch (error) {
+    console.error("Dashboard render failed:", error);
     platformGridEl.innerHTML = createStatus(`Could not load dashboard data. ${error.message}`);
     barListEl.innerHTML = "";
     currentTableEl.innerHTML = "";
-    platformHistoryChartEl.innerHTML = "";
-    platformHistoryLegendEl.innerHTML = "";
-    platformHistorySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
-    historyChartEl.innerHTML = "";
-    chartLegendEl.innerHTML = "";
-    historySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+
+    if (platformHistoryChartEl) {
+      platformHistoryChartEl.innerHTML = "";
+    }
+
+    if (platformHistoryLegendEl) {
+      platformHistoryLegendEl.innerHTML = "";
+    }
+
+    if (platformHistorySummaryEl) {
+      platformHistorySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+    }
+
+    if (historyChartEl) {
+      historyChartEl.innerHTML = "";
+    }
+
+    if (chartLegendEl) {
+      chartLegendEl.innerHTML = "";
+    }
+
+    if (historySummaryEl) {
+      historySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+    }
+
     repoNameEl.textContent = "Unavailable";
     latestSyncEl.textContent = "Unavailable";
   }
