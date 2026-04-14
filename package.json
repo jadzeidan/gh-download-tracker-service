@@ -1,0 +1,16 @@
+{
+  "name": "gh-download-tracker-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Service for collecting and exposing BitBoxApp GitHub release download metrics over time.",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "sync": "node scripts/sync.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
