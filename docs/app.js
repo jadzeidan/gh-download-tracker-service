@@ -491,8 +491,20 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
     })
     .join("");
 
+  const approxLabelWidth = 112;
+  const maxXLabels = Math.max(2, Math.floor(plotWidth / approxLabelWidth));
+  const xLabelStride = syncLabels.length <= maxXLabels ? 1 : Math.ceil(syncLabels.length / maxXLabels);
+
   const xAxisLabels = syncLabels
     .map((label, index) => {
+      const isFirst = index === 0;
+      const isLast = index === syncLabels.length - 1;
+      const shouldShow = isFirst || isLast || index % xLabelStride === 0;
+
+      if (!shouldShow) {
+        return "";
+      }
+
       const x = padding.left + xStep * index;
       const text = new Intl.DateTimeFormat("en-CH", {
         month: "short",
@@ -500,8 +512,9 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
         hour: "2-digit",
         minute: "2-digit"
       }).format(new Date(label));
+      const textAnchor = isFirst ? "start" : isLast ? "end" : "middle";
 
-      return `<text class="chart-label" x="${x}" y="${height - 12}" text-anchor="middle">${text}</text>`;
+      return `<text class="chart-label" x="${x}" y="${height - 12}" text-anchor="${textAnchor}">${text}</text>`;
     })
     .join("");
 
