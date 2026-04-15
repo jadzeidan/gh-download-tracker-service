@@ -191,8 +191,8 @@ function populateFilters(data) {
 
   if (previousPlatform && platforms.includes(previousPlatform)) {
     platformFilterEl.value = previousPlatform;
-  } else if (!platformFilterEl.dataset.initialized && platforms.length) {
-    platformFilterEl.value = platforms.includes("windows") ? "windows" : platforms[0];
+  } else if (!platformFilterEl.dataset.initialized) {
+    platformFilterEl.value = "";
   }
 
   releaseFilterEl.dataset.initialized = "true";
