@@ -293,9 +293,43 @@ h2 {
   stroke-width: 2;
 }
 
+.chart-dot-interactive {
+  cursor: pointer;
+}
+
+.chart-dot-interactive:focus {
+  outline: none;
+  stroke: #23170a;
+  stroke-width: 3;
+}
+
 .chart-label {
   font: 12px "IBM Plex Mono", "SFMono-Regular", monospace;
   fill: rgba(35, 23, 10, 0.64);
+}
+
+.chart-tooltip {
+  position: fixed;
+  z-index: 1200;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+  opacity: 0;
+  max-width: min(88vw, 420px);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(88, 57, 19, 0.22);
+  background: rgba(35, 23, 10, 0.92);
+  color: #fff7eb;
+  font: 12px/1.35 "IBM Plex Mono", "SFMono-Regular", monospace;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: opacity 120ms ease;
+}
+
+.chart-tooltip.visible {
+  opacity: 1;
 }
 
 .chart-legend {

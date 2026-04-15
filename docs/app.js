@@ -31,6 +31,7 @@ const deltaHistorySummaryEl = document.querySelector("#delta-history-summary");
 const filtersFormEl = document.querySelector("#filters-form");
 
 let dashboardData = null;
+let activeChartTooltipTarget = null;
 
 function formatNumber(value) {
   return new Intl.NumberFormat("en-US").format(value);
@@ -57,6 +58,106 @@ function formatDate(value) {
 
 function createStatus(message) {
   return `<div class="status">${message}</div>`;
+}
+
+function escapeHtmlAttribute(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("\"", "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+function ensureChartTooltipElement() {
+  let tooltipEl = document.querySelector("#chart-point-tooltip");
+
+  if (!tooltipEl) {
+    tooltipEl = document.createElement("div");
+    tooltipEl.id = "chart-point-tooltip";
+    tooltipEl.className = "chart-tooltip";
+    tooltipEl.setAttribute("role", "status");
+    tooltipEl.setAttribute("aria-live", "polite");
+    document.body.append(tooltipEl);
+  }
+
+  return tooltipEl;
+}
+
+function hideChartTooltip() {
+  const tooltipEl = document.querySelector("#chart-point-tooltip");
+
+  if (!tooltipEl) {
+    return;
+  }
+
+  tooltipEl.classList.remove("visible");
+  tooltipEl.textContent = "";
+  activeChartTooltipTarget = null;
+}
+
+function showChartTooltip(target) {
+  const tooltipText = target?.dataset?.tooltip;
+
+  if (!tooltipText) {
+    hideChartTooltip();
+    return;
+  }
+
+  const tooltipEl = ensureChartTooltipElement();
+  tooltipEl.textContent = tooltipText;
+  tooltipEl.classList.add("visible");
+  activeChartTooltipTarget = target;
+
+  const rect = target.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top - 10;
+
+  tooltipEl.style.left = `${Math.round(x)}px`;
+  tooltipEl.style.top = `${Math.round(y)}px`;
+}
+
+function setupChartTooltipInteractions() {
+  if (document.body.dataset.chartTooltipSetup === "true") {
+    return;
+  }
+
+  document.addEventListener("click", (event) => {
+    const dot = event.target?.closest?.(".chart-dot-interactive");
+
+    if (dot) {
+      if (activeChartTooltipTarget === dot) {
+        hideChartTooltip();
+      } else {
+        showChartTooltip(dot);
+      }
+      return;
+    }
+
+    hideChartTooltip();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideChartTooltip();
+      return;
+    }
+
+    const isActivateKey = event.key === "Enter" || event.key === " ";
+    const dot = event.target?.classList?.contains("chart-dot-interactive") ? event.target : null;
+
+    if (isActivateKey && dot) {
+      event.preventDefault();
+      if (activeChartTooltipTarget === dot) {
+        hideChartTooltip();
+      } else {
+        showChartTooltip(dot);
+      }
+    }
+  });
+
+  window.addEventListener("resize", hideChartTooltip);
+  window.addEventListener("scroll", hideChartTooltip, true);
+  document.body.dataset.chartTooltipSetup = "true";
 }
 
 function buildCurrentFromStore(assetSnapshots) {
@@ -410,7 +511,15 @@ function renderLegend(container, keys, formatter) {
     .join("");
 }
 
-function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, valueMode = "absolute" }) {
+function renderLineChart({
+  svgEl,
+  legendEl,
+  items,
+  seriesKey,
+  legendFormatter,
+  valueMode = "absolute",
+  tooltipValueFormatter = formatNumber
+}) {
   if (!svgEl || !legendEl) {
     return;
   }
@@ -418,6 +527,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
   if (!items.length) {
     svgEl.innerHTML = "";
     legendEl.innerHTML = "";
+    hideChartTooltip();
     return;
   }
 
@@ -520,6 +630,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
 
   const seriesMarkup = preparedSeries
     .map((series) => {
+      const seriesLabel = legendFormatter(series);
       const path = series.points
         .map((point, index) => {
           const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
@@ -533,8 +644,16 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
         .map((point) => {
           const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
           const y = padding.top + plotHeight - ((point.chartDownloads - yMin) / yRange) * plotHeight;
+          const tooltipText =
+            `${seriesLabel} | ${formatDate(point.syncedAt)} | ` +
+            `${tooltipValueFormatter(point.totalDownloads)}`;
+          const escapedTooltip = escapeHtmlAttribute(tooltipText);
 
-          return `<circle class="chart-dot" cx="${x}" cy="${y}" r="4.5" fill="${platformColors[series.platform] ?? "#6c5a45"}"></circle>`;
+          return (
+            `<circle class="chart-dot chart-dot-interactive" cx="${x}" cy="${y}" r="4.5" ` +
+            `fill="${platformColors[series.platform] ?? "#6c5a45"}" data-tooltip="${escapedTooltip}" ` +
+            `tabindex="0" role="button" aria-label="${escapedTooltip}"></circle>`
+          );
         })
         .join("");
 
@@ -554,6 +673,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
   `;
 
   renderLegend(legendEl, preparedSeries, legendFormatter);
+  hideChartTooltip();
 }
 
 function renderPlatformHistoryChart(data) {
@@ -602,7 +722,8 @@ function renderPointDeltaHistoryChart(data) {
     legendEl: deltaHistoryLegendEl,
     items: deltaItems,
     seriesKey,
-    legendFormatter: (item) => `${item.releaseTag} - ${item.platform}`
+    legendFormatter: (item) => `${item.releaseTag} - ${item.platform}`,
+    tooltipValueFormatter: formatSignedNumber
   });
 }
 
@@ -696,3 +817,4 @@ filtersFormEl.addEventListener("change", () => {
 });
 
 loadDashboard();
+setupChartTooltipInteractions();
