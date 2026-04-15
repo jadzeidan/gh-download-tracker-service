@@ -342,7 +342,15 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
 
   const allPoints = seriesList.flatMap((series) => series.points);
   const syncLabels = [...new Set(allPoints.map((item) => item.syncedAt))];
-  const maxDownloads = Math.max(...allPoints.map((item) => item.totalDownloads), 1);
+  const syncIndexByLabel = new Map(syncLabels.map((label, index) => [label, index]));
+  const pointValues = allPoints.map((item) => item.totalDownloads);
+  const rawMinDownloads = Math.min(...pointValues);
+  const rawMaxDownloads = Math.max(...pointValues);
+  const rawRange = rawMaxDownloads - rawMinDownloads;
+  const yPadding = rawRange === 0 ? Math.max(rawMaxDownloads * 0.02, 1) : Math.max(rawRange * 0.08, 1);
+  const yMin = Math.max(0, rawMinDownloads - yPadding);
+  const yMax = rawMaxDownloads + yPadding;
+  const yRange = Math.max(yMax - yMin, 1);
 
   const width = 880;
   const height = 320;
@@ -352,7 +360,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
 
   const gridLines = 4;
   const yTicks = Array.from({ length: gridLines + 1 }, (_, index) => {
-    return Math.round((maxDownloads / gridLines) * (gridLines - index));
+    return yMax - (yRange / gridLines) * index;
   });
 
   const xStep = syncLabels.length > 1 ? plotWidth / (syncLabels.length - 1) : 0;
@@ -362,7 +370,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
       const y = padding.top + (plotHeight / gridLines) * index;
       return `
         <line class="chart-grid" x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>
-        <text class="chart-label" x="${padding.left - 12}" y="${y + 4}" text-anchor="end">${formatNumber(tick)}</text>
+        <text class="chart-label" x="${padding.left - 12}" y="${y + 4}" text-anchor="end">${formatNumber(Math.round(tick))}</text>
       `;
     })
     .join("");
@@ -386,8 +394,8 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
       const sortedPoints = [...series.points].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
       const path = sortedPoints
         .map((point, index) => {
-          const x = padding.left + xStep * syncLabels.indexOf(point.syncedAt);
-          const y = padding.top + plotHeight - (point.totalDownloads / maxDownloads) * plotHeight;
+          const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
+          const y = padding.top + plotHeight - ((point.totalDownloads - yMin) / yRange) * plotHeight;
 
           return `${index === 0 ? "M" : "L"} ${x} ${y}`;
         })
@@ -395,8 +403,8 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
 
       const dots = sortedPoints
         .map((point) => {
-          const x = padding.left + xStep * syncLabels.indexOf(point.syncedAt);
-          const y = padding.top + plotHeight - (point.totalDownloads / maxDownloads) * plotHeight;
+          const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
+          const y = padding.top + plotHeight - ((point.totalDownloads - yMin) / yRange) * plotHeight;
 
           return `<circle class="chart-dot" cx="${x}" cy="${y}" r="4.5" fill="${platformColors[series.platform] ?? "#6c5a45"}"></circle>`;
         })
