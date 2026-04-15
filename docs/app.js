@@ -155,6 +155,8 @@ function buildPlatformTrendFromStore(assetSnapshots) {
 }
 
 function populateFilters(data) {
+  const previousRelease = releaseFilterEl.value;
+  const previousPlatform = platformFilterEl.value;
   const releases = [...new Set(data.current.map((item) => item.releaseTag))];
   const platforms = [...new Set(data.current.map((item) => item.platform))];
 
@@ -165,6 +167,21 @@ function populateFilters(data) {
   platformFilterEl.innerHTML =
     '<option value="">All platforms</option>' +
     platforms.map((platform) => `<option value="${platform}">${platform}</option>`).join("");
+
+  if (previousRelease && releases.includes(previousRelease)) {
+    releaseFilterEl.value = previousRelease;
+  } else if (!releaseFilterEl.dataset.initialized && releases.length) {
+    releaseFilterEl.value = releases[0];
+  }
+
+  if (previousPlatform && platforms.includes(previousPlatform)) {
+    platformFilterEl.value = previousPlatform;
+  } else if (!platformFilterEl.dataset.initialized && platforms.length) {
+    platformFilterEl.value = platforms.includes("windows") ? "windows" : platforms[0];
+  }
+
+  releaseFilterEl.dataset.initialized = "true";
+  platformFilterEl.dataset.initialized = "true";
 }
 
 function renderPlatformCards(data) {
@@ -308,7 +325,7 @@ function renderLegend(container, keys, formatter) {
     .join("");
 }
 
-function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter }) {
+function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, valueMode = "absolute" }) {
   if (!svgEl || !legendEl) {
     return;
   }
@@ -340,10 +357,24 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
     return left.platform.localeCompare(right.platform);
   });
 
-  const allPoints = seriesList.flatMap((series) => series.points);
+  const preparedSeries = seriesList.map((series) => {
+    const sortedPoints = [...series.points].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
+    const baseline = sortedPoints[0]?.totalDownloads ?? 0;
+
+    return {
+      ...series,
+      points: sortedPoints.map((point) => ({
+        ...point,
+        chartDownloads:
+          valueMode === "delta-from-first" ? point.totalDownloads - baseline : point.totalDownloads
+      }))
+    };
+  });
+
+  const allPoints = preparedSeries.flatMap((series) => series.points);
   const syncLabels = [...new Set(allPoints.map((item) => item.syncedAt))];
   const syncIndexByLabel = new Map(syncLabels.map((label, index) => [label, index]));
-  const pointValues = allPoints.map((item) => item.totalDownloads);
+  const pointValues = allPoints.map((item) => item.chartDownloads);
   const rawMinDownloads = Math.min(...pointValues);
   const rawMaxDownloads = Math.max(...pointValues);
   const rawRange = rawMaxDownloads - rawMinDownloads;
@@ -389,22 +420,21 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
     })
     .join("");
 
-  const seriesMarkup = seriesList
+  const seriesMarkup = preparedSeries
     .map((series) => {
-      const sortedPoints = [...series.points].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
-      const path = sortedPoints
+      const path = series.points
         .map((point, index) => {
           const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
-          const y = padding.top + plotHeight - ((point.totalDownloads - yMin) / yRange) * plotHeight;
+          const y = padding.top + plotHeight - ((point.chartDownloads - yMin) / yRange) * plotHeight;
 
           return `${index === 0 ? "M" : "L"} ${x} ${y}`;
         })
         .join(" ");
 
-      const dots = sortedPoints
+      const dots = series.points
         .map((point) => {
           const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
-          const y = padding.top + plotHeight - ((point.totalDownloads - yMin) / yRange) * plotHeight;
+          const y = padding.top + plotHeight - ((point.chartDownloads - yMin) / yRange) * plotHeight;
 
           return `<circle class="chart-dot" cx="${x}" cy="${y}" r="4.5" fill="${platformColors[series.platform] ?? "#6c5a45"}"></circle>`;
         })
@@ -425,7 +455,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter })
     ${xAxisLabels}
   `;
 
-  renderLegend(legendEl, seriesList, legendFormatter);
+  renderLegend(legendEl, preparedSeries, legendFormatter);
 }
 
 function renderPlatformHistoryChart(data) {
@@ -433,11 +463,16 @@ function renderPlatformHistoryChart(data) {
     return;
   }
 
-  summarizePlatformTrend(data.platformTrend);
+  const selectedPlatform = platformFilterEl.value;
+  const items = selectedPlatform
+    ? data.platformTrend.filter((item) => item.platform === selectedPlatform)
+    : data.platformTrend;
+
+  summarizePlatformTrend(items);
   renderLineChart({
     svgEl: platformHistoryChartEl,
     legendEl: platformHistoryLegendEl,
-    items: data.platformTrend,
+    items,
     seriesKey: (item) => item.platform,
     legendFormatter: (item) => item.platform
   });
