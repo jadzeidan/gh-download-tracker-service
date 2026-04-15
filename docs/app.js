@@ -25,12 +25,27 @@ const platformHistoryLegendEl = document.querySelector("#platform-history-legend
 const platformHistorySummaryEl = document.querySelector("#platform-history-summary");
 const historyChartEl = document.querySelector("#history-chart");
 const chartLegendEl = document.querySelector("#chart-legend");
+const deltaHistoryChartEl = document.querySelector("#delta-history-chart");
+const deltaHistoryLegendEl = document.querySelector("#delta-history-legend");
+const deltaHistorySummaryEl = document.querySelector("#delta-history-summary");
 const filtersFormEl = document.querySelector("#filters-form");
 
 let dashboardData = null;
 
 function formatNumber(value) {
   return new Intl.NumberFormat("en-US").format(value);
+}
+
+function formatSignedNumber(value) {
+  if (value > 0) {
+    return `+${formatNumber(value)}`;
+  }
+
+  if (value < 0) {
+    return `-${formatNumber(Math.abs(value))}`;
+  }
+
+  return "0";
 }
 
 function formatDate(value) {
@@ -272,6 +287,45 @@ function getFilteredHistory(data) {
   });
 }
 
+function buildPointDeltaHistory(items, seriesKey) {
+  const pointsBySeries = new Map();
+
+  for (const item of items) {
+    const key = seriesKey(item);
+    const series = pointsBySeries.get(key) ?? [];
+    series.push(item);
+    pointsBySeries.set(key, series);
+  }
+
+  const deltaRows = [];
+
+  for (const seriesRows of pointsBySeries.values()) {
+    const sortedSeriesRows = [...seriesRows].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
+
+    for (let index = 0; index < sortedSeriesRows.length; index += 1) {
+      const current = sortedSeriesRows[index];
+      const previous = sortedSeriesRows[index - 1];
+
+      deltaRows.push({
+        ...current,
+        totalDownloads: previous ? current.totalDownloads - previous.totalDownloads : 0
+      });
+    }
+  }
+
+  return deltaRows.sort((left, right) => {
+    if (left.syncedAt === right.syncedAt) {
+      if (left.releasePublishedAt === right.releasePublishedAt) {
+        return left.platform.localeCompare(right.platform);
+      }
+
+      return (right.releasePublishedAt ?? "").localeCompare(left.releasePublishedAt ?? "");
+    }
+
+    return left.syncedAt.localeCompare(right.syncedAt);
+  });
+}
+
 function summarizeHistory(items) {
   if (!items.length) {
     historySummaryEl.textContent = "No matching history for the selected filters yet.";
@@ -306,6 +360,37 @@ function summarizePlatformTrend(items) {
   platformHistorySummaryEl.textContent =
     `Aggregated platform totals across ${syncRuns} sync run${syncRuns === 1 ? "" : "s"}. ` +
     `Latest leader: ${leader.platform} with ${formatNumber(leader.totalDownloads)} downloads.`;
+}
+
+function summarizePointDeltaHistory(deltaItems) {
+  if (!deltaHistorySummaryEl) {
+    return;
+  }
+
+  if (!deltaItems.length) {
+    deltaHistorySummaryEl.textContent = "No matching delta history for the selected filters yet.";
+    return;
+  }
+
+  const nonInitialPoints = deltaItems.filter((item) => item.totalDownloads !== 0);
+
+  if (!nonInitialPoints.length) {
+    deltaHistorySummaryEl.textContent = "Need at least two sync points to calculate per-point deltas.";
+    return;
+  }
+
+  const latestSync = deltaItems[deltaItems.length - 1].syncedAt;
+  const latestRows = deltaItems.filter((item) => item.syncedAt === latestSync);
+  const latestLeader = [...latestRows].sort((left, right) => right.totalDownloads - left.totalDownloads)[0];
+  const biggestChange = [...nonInitialPoints].sort(
+    (left, right) => Math.abs(right.totalDownloads) - Math.abs(left.totalDownloads)
+  )[0];
+
+  deltaHistorySummaryEl.textContent =
+    `Latest delta at ${formatDate(latestSync)}: ${latestLeader.releaseTag} ${latestLeader.platform} ` +
+    `${formatSignedNumber(latestLeader.totalDownloads)}. ` +
+    `Largest absolute change in this view: ${biggestChange.releaseTag} ${biggestChange.platform} ` +
+    `${formatSignedNumber(biggestChange.totalDownloads)}.`;
 }
 
 function renderLegend(container, keys, formatter) {
@@ -379,7 +464,7 @@ function renderLineChart({ svgEl, legendEl, items, seriesKey, legendFormatter, v
   const rawMaxDownloads = Math.max(...pointValues);
   const rawRange = rawMaxDownloads - rawMinDownloads;
   const yPadding = rawRange === 0 ? Math.max(rawMaxDownloads * 0.02, 1) : Math.max(rawRange * 0.08, 1);
-  const yMin = Math.max(0, rawMinDownloads - yPadding);
+  const yMin = rawMinDownloads - yPadding;
   const yMax = rawMaxDownloads + yPadding;
   const yRange = Math.max(yMax - yMin, 1);
 
@@ -490,6 +575,24 @@ function renderHistoryChart(data) {
   });
 }
 
+function renderPointDeltaHistoryChart(data) {
+  if (!deltaHistoryChartEl || !deltaHistoryLegendEl || !deltaHistorySummaryEl) {
+    return;
+  }
+
+  const seriesKey = (item) => `${item.releaseTag}:${item.platform}`;
+  const items = getFilteredHistory(data);
+  const deltaItems = buildPointDeltaHistory(items, seriesKey);
+  summarizePointDeltaHistory(deltaItems);
+  renderLineChart({
+    svgEl: deltaHistoryChartEl,
+    legendEl: deltaHistoryLegendEl,
+    items: deltaItems,
+    seriesKey,
+    legendFormatter: (item) => `${item.releaseTag} - ${item.platform}`
+  });
+}
+
 function renderDashboard(data) {
   repoNameEl.textContent = data.meta.repo;
   latestSyncEl.textContent = data.syncRuns.length
@@ -502,6 +605,7 @@ function renderDashboard(data) {
   renderCurrentTable(data);
   renderHistoryChart(data);
   renderPlatformHistoryChart(data);
+  renderPointDeltaHistoryChart(data);
 }
 
 async function loadDashboard() {
@@ -553,6 +657,18 @@ async function loadDashboard() {
       historySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
     }
 
+    if (deltaHistoryChartEl) {
+      deltaHistoryChartEl.innerHTML = "";
+    }
+
+    if (deltaHistoryLegendEl) {
+      deltaHistoryLegendEl.innerHTML = "";
+    }
+
+    if (deltaHistorySummaryEl) {
+      deltaHistorySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+    }
+
     repoNameEl.textContent = "Unavailable";
     latestSyncEl.textContent = "Unavailable";
   }
@@ -561,6 +677,8 @@ async function loadDashboard() {
 filtersFormEl.addEventListener("change", () => {
   if (dashboardData) {
     renderHistoryChart(dashboardData);
+    renderPlatformHistoryChart(dashboardData);
+    renderPointDeltaHistoryChart(dashboardData);
   }
 });
 

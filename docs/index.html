@@ -114,6 +114,27 @@
         <section class="card">
           <div class="section-head">
             <div>
+              <p class="section-kicker">Delta</p>
+              <h2>Download change per sync point</h2>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <svg
+              id="delta-history-chart"
+              viewBox="0 0 880 320"
+              role="img"
+              aria-label="Download delta history chart"
+            ></svg>
+          </div>
+          <div class="chart-legend" id="delta-history-legend"></div>
+          <div class="mini-stat" id="delta-history-summary">
+            Each point shows the change since the previous sync for the same series.
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
               <p class="section-kicker">Releases</p>
               <h2>Latest totals per release and platform</h2>
             </div>

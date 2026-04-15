@@ -263,7 +263,9 @@ h2 {
   overflow-x: auto;
 }
 
-#history-chart {
+#history-chart,
+#platform-history-chart,
+#delta-history-chart {
   width: 100%;
   min-width: 760px;
   height: auto;
