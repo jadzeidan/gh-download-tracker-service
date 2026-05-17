@@ -1,0 +1,1074 @@
+const platformColors = {
+  windows: "#155eef",
+  macos: "#e65c2b",
+  linux: "#14866d",
+  android: "#6f9f1c"
+};
+
+const platformDescriptions = {
+  windows: "Installer downloads",
+  macos: "DMG and ZIP downloads",
+  linux: "DEB, RPM, and AppImage downloads",
+  android: "Direct APK downloads"
+};
+
+const repoNameEl = document.querySelector("#repo-name");
+const latestSyncEl = document.querySelector("#latest-sync");
+const platformGridEl = document.querySelector("#platform-grid");
+const barListEl = document.querySelector("#bar-list");
+const releaseFilterEl = document.querySelector("#release-filter");
+const platformFilterEl = document.querySelector("#platform-filter");
+const dateFromFilterEl = document.querySelector("#date-from-filter");
+const dateToFilterEl = document.querySelector("#date-to-filter");
+const datePresetButtons = Array.from(document.querySelectorAll("#date-presets button[data-range]"));
+const historySummaryEl = document.querySelector("#history-summary");
+const currentTableEl = document.querySelector("#current-table");
+const platformHistoryChartEl = document.querySelector("#platform-history-chart");
+const platformHistoryLegendEl = document.querySelector("#platform-history-legend");
+const platformHistorySummaryEl = document.querySelector("#platform-history-summary");
+const historyChartEl = document.querySelector("#history-chart");
+const chartLegendEl = document.querySelector("#chart-legend");
+const deltaHistoryChartEl = document.querySelector("#delta-history-chart");
+const deltaHistoryLegendEl = document.querySelector("#delta-history-legend");
+const deltaHistorySummaryEl = document.querySelector("#delta-history-summary");
+const filtersFormEl = document.querySelector("#filters-form");
+
+let dashboardData = null;
+let activeChartTooltipTarget = null;
+let activeDatePreset = "90d";
+
+function formatNumber(value) {
+  return new Intl.NumberFormat("en-US").format(value);
+}
+
+function formatSignedNumber(value) {
+  if (value > 0) {
+    return `+${formatNumber(value)}`;
+  }
+
+  if (value < 0) {
+    return `-${formatNumber(Math.abs(value))}`;
+  }
+
+  return "0";
+}
+
+function formatDate(value) {
+  return new Intl.DateTimeFormat("en-CH", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  }).format(new Date(value));
+}
+
+function createStatus(message) {
+  return `<div class="status">${message}</div>`;
+}
+
+function getPlatformLabel(platform) {
+  return platform;
+}
+
+function toDateInputValue(dateValue) {
+  const date = new Date(dateValue);
+  const year = String(date.getFullYear());
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function escapeHtmlAttribute(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("\"", "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+function ensureChartTooltipElement() {
+  let tooltipEl = document.querySelector("#chart-point-tooltip");
+
+  if (!tooltipEl) {
+    tooltipEl = document.createElement("div");
+    tooltipEl.id = "chart-point-tooltip";
+    tooltipEl.className = "chart-tooltip";
+    tooltipEl.setAttribute("role", "status");
+    tooltipEl.setAttribute("aria-live", "polite");
+    document.body.append(tooltipEl);
+  }
+
+  return tooltipEl;
+}
+
+function hideChartTooltip() {
+  const tooltipEl = document.querySelector("#chart-point-tooltip");
+
+  if (!tooltipEl) {
+    return;
+  }
+
+  tooltipEl.classList.remove("visible");
+  tooltipEl.textContent = "";
+  activeChartTooltipTarget = null;
+}
+
+function showChartTooltip(target) {
+  const tooltipText = target?.dataset?.tooltip;
+
+  if (!tooltipText) {
+    hideChartTooltip();
+    return;
+  }
+
+  const tooltipEl = ensureChartTooltipElement();
+  tooltipEl.textContent = tooltipText;
+  tooltipEl.classList.add("visible");
+  activeChartTooltipTarget = target;
+
+  const rect = target.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top - 10;
+
+  tooltipEl.style.left = `${Math.round(x)}px`;
+  tooltipEl.style.top = `${Math.round(y)}px`;
+}
+
+function setupChartTooltipInteractions() {
+  if (document.body.dataset.chartTooltipSetup === "true") {
+    return;
+  }
+
+  document.addEventListener("click", (event) => {
+    const dot = event.target?.closest?.(".chart-dot-interactive");
+
+    if (dot) {
+      if (activeChartTooltipTarget === dot) {
+        hideChartTooltip();
+      } else {
+        showChartTooltip(dot);
+      }
+      return;
+    }
+
+    hideChartTooltip();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideChartTooltip();
+      return;
+    }
+
+    const isActivateKey = event.key === "Enter" || event.key === " ";
+    const dot = event.target?.classList?.contains("chart-dot-interactive") ? event.target : null;
+
+    if (isActivateKey && dot) {
+      event.preventDefault();
+      if (activeChartTooltipTarget === dot) {
+        hideChartTooltip();
+      } else {
+        showChartTooltip(dot);
+      }
+    }
+  });
+
+  window.addEventListener("resize", hideChartTooltip);
+  window.addEventListener("scroll", hideChartTooltip, true);
+  document.body.dataset.chartTooltipSetup = "true";
+}
+
+function updateDatePresetUi() {
+  for (const button of datePresetButtons) {
+    const isActive = button.dataset.range === activeDatePreset;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  }
+}
+
+function getDateFilterBounds(historyItems) {
+  if (!historyItems.length) {
+    return null;
+  }
+
+  return {
+    minDate: toDateInputValue(historyItems[0].syncedAt),
+    maxDate: toDateInputValue(historyItems[historyItems.length - 1].syncedAt),
+    maxDateTime: new Date(historyItems[historyItems.length - 1].syncedAt)
+  };
+}
+
+function applyDatePreset(preset, data) {
+  const bounds = getDateFilterBounds(data.history);
+
+  if (!bounds) {
+    return;
+  }
+
+  activeDatePreset = preset;
+
+  if (preset === "all") {
+    dateFromFilterEl.value = "";
+    dateToFilterEl.value = "";
+    updateDatePresetUi();
+    return;
+  }
+
+  const presetDays = {
+    "7d": 7,
+    "30d": 30,
+    "90d": 90,
+    "180d": 180,
+    "1y": 365
+  };
+
+  const days = presetDays[preset];
+
+  if (!days) {
+    return;
+  }
+
+  const toDate = new Date(bounds.maxDateTime);
+  toDate.setHours(0, 0, 0, 0);
+  const fromDate = new Date(toDate);
+  fromDate.setDate(fromDate.getDate() - (days - 1));
+
+  dateFromFilterEl.value = toDateInputValue(fromDate);
+  dateToFilterEl.value = bounds.maxDate;
+  updateDatePresetUi();
+}
+
+function updateDateInputBounds(data) {
+  const bounds = getDateFilterBounds(data.history);
+
+  if (!bounds) {
+    return;
+  }
+
+  dateFromFilterEl.max = bounds.maxDate;
+  dateToFilterEl.max = bounds.maxDate;
+
+  if (dateFromFilterEl.value && dateFromFilterEl.value > bounds.maxDate) {
+    dateFromFilterEl.value = bounds.maxDate;
+  }
+
+  if (dateToFilterEl.value && dateToFilterEl.value > bounds.maxDate) {
+    dateToFilterEl.value = bounds.maxDate;
+  }
+}
+
+function getSelectedDateRangeMs() {
+  const fromDateRaw = dateFromFilterEl.value;
+  const toDateRaw = dateToFilterEl.value;
+
+  if (!fromDateRaw && !toDateRaw) {
+    return {
+      fromMs: null,
+      toMs: null
+    };
+  }
+
+  let fromMs = fromDateRaw ? new Date(`${fromDateRaw}T00:00:00`).getTime() : null;
+  let toMs = toDateRaw ? new Date(`${toDateRaw}T23:59:59.999`).getTime() : null;
+
+  if (fromMs !== null && toMs !== null && fromMs > toMs) {
+    const normalizedFrom = new Date(toMs);
+    normalizedFrom.setHours(0, 0, 0, 0);
+    const normalizedTo = new Date(fromMs);
+    normalizedTo.setHours(23, 59, 59, 999);
+    fromMs = normalizedFrom.getTime();
+    toMs = normalizedTo.getTime();
+  }
+
+  return { fromMs, toMs };
+}
+
+function filterItemsByDateRange(items, timestampSelector = (item) => item.syncedAt) {
+  const { fromMs, toMs } = getSelectedDateRangeMs();
+
+  return items.filter((item) => {
+    const itemMs = new Date(timestampSelector(item)).getTime();
+
+    if (!Number.isFinite(itemMs)) {
+      return false;
+    }
+
+    if (fromMs !== null && itemMs < fromMs) {
+      return false;
+    }
+
+    if (toMs !== null && itemMs > toMs) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
+function buildCurrentFromStore(assetSnapshots) {
+  const latestRows = new Map();
+
+  for (const snapshot of assetSnapshots) {
+    const key = `${snapshot.releaseTag}:${snapshot.platform}`;
+    const existing = latestRows.get(key);
+
+    if (!existing || snapshot.syncedAt > existing.syncedAt) {
+      latestRows.set(key, {
+        releaseTag: snapshot.releaseTag,
+        releaseName: snapshot.releaseName,
+        releasePublishedAt: snapshot.releasePublishedAt,
+        releaseHtmlUrl: snapshot.releaseHtmlUrl,
+        platform: snapshot.platform,
+        syncedAt: snapshot.syncedAt,
+        totalDownloads: 0,
+        distributions: {}
+      });
+    }
+  }
+
+  for (const snapshot of assetSnapshots) {
+    const key = `${snapshot.releaseTag}:${snapshot.platform}`;
+    const current = latestRows.get(key);
+
+    if (!current || current.syncedAt !== snapshot.syncedAt) {
+      continue;
+    }
+
+    current.totalDownloads += snapshot.downloadCount;
+    current.distributions[snapshot.distribution] =
+      (current.distributions[snapshot.distribution] ?? 0) + snapshot.downloadCount;
+  }
+
+  return Array.from(latestRows.values()).sort((left, right) => {
+    if (left.releasePublishedAt === right.releasePublishedAt) {
+      return left.platform.localeCompare(right.platform);
+    }
+
+    return right.releasePublishedAt.localeCompare(left.releasePublishedAt);
+  });
+}
+
+function buildPlatformTotalsFromStore(assetSnapshots) {
+  const current = buildCurrentFromStore(assetSnapshots);
+  const totals = new Map();
+
+  for (const row of current) {
+    totals.set(row.platform, (totals.get(row.platform) ?? 0) + row.totalDownloads);
+  }
+
+  return Array.from(totals.entries())
+    .map(([platform, totalDownloads]) => ({ platform, totalDownloads }))
+    .sort((left, right) => right.totalDownloads - left.totalDownloads);
+}
+
+function buildHistoryFromStore(assetSnapshots) {
+  const grouped = new Map();
+
+  for (const snapshot of assetSnapshots) {
+    const key = `${snapshot.syncedAt}:${snapshot.releaseTag}:${snapshot.platform}`;
+    const existing = grouped.get(key) ?? {
+      syncedAt: snapshot.syncedAt,
+      releaseTag: snapshot.releaseTag,
+      releasePublishedAt: snapshot.releasePublishedAt,
+      platform: snapshot.platform,
+      totalDownloads: 0
+    };
+
+    existing.totalDownloads += snapshot.downloadCount;
+    grouped.set(key, existing);
+  }
+
+  return Array.from(grouped.values()).sort((left, right) => {
+    if (left.syncedAt === right.syncedAt) {
+      if (left.releasePublishedAt === right.releasePublishedAt) {
+        return left.platform.localeCompare(right.platform);
+      }
+
+      return right.releasePublishedAt.localeCompare(left.releasePublishedAt);
+    }
+
+    return left.syncedAt.localeCompare(right.syncedAt);
+  });
+}
+
+function buildPlatformTrendFromStore(assetSnapshots) {
+  const grouped = new Map();
+
+  for (const snapshot of assetSnapshots) {
+    const key = `${snapshot.syncedAt}:${snapshot.platform}`;
+    const existing = grouped.get(key) ?? {
+      syncedAt: snapshot.syncedAt,
+      platform: snapshot.platform,
+      totalDownloads: 0
+    };
+
+    existing.totalDownloads += snapshot.downloadCount;
+    grouped.set(key, existing);
+  }
+
+  return Array.from(grouped.values()).sort((left, right) => {
+    if (left.syncedAt === right.syncedAt) {
+      return left.platform.localeCompare(right.platform);
+    }
+
+    return left.syncedAt.localeCompare(right.syncedAt);
+  });
+}
+
+function populateFilters(data) {
+  const previousRelease = releaseFilterEl.value;
+  const previousPlatform = platformFilterEl.value;
+  const releases = [...new Set(data.current.map((item) => item.releaseTag))];
+  const platforms = [...new Set(data.current.map((item) => item.platform))];
+
+  releaseFilterEl.innerHTML =
+    '<option value="">All releases</option>' +
+    releases.map((release) => `<option value="${release}">${release}</option>`).join("");
+
+  platformFilterEl.innerHTML =
+    '<option value="">All platforms</option>' +
+    platforms.map((platform) => `<option value="${platform}">${platform}</option>`).join("");
+
+  if (previousRelease && releases.includes(previousRelease)) {
+    releaseFilterEl.value = previousRelease;
+  } else if (!releaseFilterEl.dataset.initialized && releases.length) {
+    releaseFilterEl.value = releases[0];
+  }
+
+  if (previousPlatform && platforms.includes(previousPlatform)) {
+    platformFilterEl.value = previousPlatform;
+  } else if (!platformFilterEl.dataset.initialized) {
+    platformFilterEl.value = "";
+  }
+
+  releaseFilterEl.dataset.initialized = "true";
+  platformFilterEl.dataset.initialized = "true";
+  updateDateInputBounds(data);
+
+  if (dateFromFilterEl.dataset.initialized !== "true") {
+    applyDatePreset("90d", data);
+    dateFromFilterEl.dataset.initialized = "true";
+    dateToFilterEl.dataset.initialized = "true";
+  }
+
+  updateDatePresetUi();
+}
+
+function renderPlatformCards(data) {
+  if (!data.platformTotals.length) {
+    platformGridEl.innerHTML = createStatus("No platform totals yet.");
+    return;
+  }
+
+  platformGridEl.innerHTML = data.platformTotals
+    .map(
+      (item) => `
+        <article class="platform-card ${item.platform}">
+          <h3>${item.platform}</h3>
+          <p class="value">${formatNumber(item.totalDownloads)}</p>
+          <p class="subtext">${platformDescriptions[item.platform] ?? "Release downloads"}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderBarList(data) {
+  const rangeFilteredTrend = filterItemsByDateRange(data.platformTrend);
+
+  if (!rangeFilteredTrend.length) {
+    barListEl.innerHTML = createStatus("No platform totals available for the selected date range.");
+    return;
+  }
+
+  const pointsByPlatform = new Map();
+
+  for (const item of rangeFilteredTrend) {
+    const series = pointsByPlatform.get(item.platform) ?? [];
+    series.push(item);
+    pointsByPlatform.set(item.platform, series);
+  }
+
+  const coverageByPlatform = new Map();
+
+  for (const item of data.platformTrend) {
+    const timestampMs = new Date(item.syncedAt).getTime();
+
+    if (!Number.isFinite(timestampMs)) {
+      continue;
+    }
+
+    const existing = coverageByPlatform.get(item.platform);
+
+    if (!existing) {
+      coverageByPlatform.set(item.platform, { minMs: timestampMs, maxMs: timestampMs });
+      continue;
+    }
+
+    existing.minMs = Math.min(existing.minMs, timestampMs);
+    existing.maxMs = Math.max(existing.maxMs, timestampMs);
+  }
+
+  const { fromMs, toMs } = getSelectedDateRangeMs();
+  const rangeOverflowToleranceMs = 36 * 60 * 60 * 1000;
+
+  const leaderboardItems = Array.from(pointsByPlatform.entries())
+    .map(([platform, points]) => {
+      const sortedPoints = [...points].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
+      const first = sortedPoints[0];
+      const last = sortedPoints[sortedPoints.length - 1];
+      const change = last.totalDownloads - first.totalDownloads;
+      const coverage = coverageByPlatform.get(platform);
+      const isOutOfRange =
+        !!coverage &&
+        ((fromMs !== null && fromMs < coverage.minMs - rangeOverflowToleranceMs) ||
+          (toMs !== null && toMs > coverage.maxMs + rangeOverflowToleranceMs));
+
+      return {
+        platform,
+        totalDownloads: change,
+        isOutOfRange
+      };
+    })
+    .sort((left, right) => right.totalDownloads - left.totalDownloads);
+
+  if (!leaderboardItems.length) {
+    barListEl.innerHTML = createStatus("No platform totals available for the selected date range.");
+    return;
+  }
+
+  const maxMagnitude = Math.max(...leaderboardItems.map((item) => Math.abs(item.totalDownloads)), 1);
+
+  barListEl.innerHTML = leaderboardItems
+    .map((item) => {
+      const width = (Math.abs(item.totalDownloads) / maxMagnitude) * 100;
+      const fillColor =
+        item.totalDownloads < 0 ? "#b45309" : (platformColors[item.platform] ?? "#6c5a45");
+      const outOfRangeBadge = item.isOutOfRange
+        ? '<span class="range-badge">(data out of range)</span>'
+        : "";
+
+      return `
+        <div class="bar-row">
+          <header>
+            <span class="bar-platform-label">${getPlatformLabel(item.platform)} ${outOfRangeBadge}</span>
+            <span>${formatSignedNumber(item.totalDownloads)}</span>
+          </header>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:${width}%; background:${fillColor};"></div>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function renderCurrentTable(data) {
+  if (!data.current.length) {
+    currentTableEl.innerHTML = `<tr><td colspan="5">No release data available.</td></tr>`;
+    return;
+  }
+
+  currentTableEl.innerHTML = data.current
+    .map((item) => {
+      const breakdown = Object.entries(item.distributions)
+        .map(([distribution, value]) => `<span class="pill">${distribution}: ${formatNumber(value)}</span>`)
+        .join("");
+
+      return `
+        <tr>
+          <td><a class="release-link" href="${item.releaseHtmlUrl}" target="_blank" rel="noreferrer">${item.releaseTag}</a></td>
+          <td>${formatDate(item.releasePublishedAt)}</td>
+          <td>${item.platform}</td>
+          <td>${formatNumber(item.totalDownloads)}</td>
+          <td><div class="pill-group">${breakdown}</div></td>
+        </tr>
+      `;
+    })
+    .join("");
+}
+
+function getFilteredHistory(data) {
+  const selectedPlatform = platformFilterEl.value;
+  const selectedRelease = releaseFilterEl.value;
+
+  const baseItems = filterItemsByDateRange(data.history);
+
+  return baseItems.filter((item) => {
+    if (selectedPlatform && item.platform !== selectedPlatform) {
+      return false;
+    }
+
+    if (selectedRelease && item.releaseTag !== selectedRelease) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
+function handleDateFilterInputChange() {
+  if (!dateFromFilterEl.value && !dateToFilterEl.value) {
+    activeDatePreset = "all";
+  } else {
+    activeDatePreset = "custom";
+  }
+
+  updateDatePresetUi();
+}
+
+function buildPointDeltaHistory(items, seriesKey) {
+  const pointsBySeries = new Map();
+
+  for (const item of items) {
+    const key = seriesKey(item);
+    const series = pointsBySeries.get(key) ?? [];
+    series.push(item);
+    pointsBySeries.set(key, series);
+  }
+
+  const deltaRows = [];
+
+  for (const seriesRows of pointsBySeries.values()) {
+    const sortedSeriesRows = [...seriesRows].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
+
+    for (let index = 0; index < sortedSeriesRows.length; index += 1) {
+      const current = sortedSeriesRows[index];
+      const previous = sortedSeriesRows[index - 1];
+
+      deltaRows.push({
+        ...current,
+        totalDownloads: previous ? current.totalDownloads - previous.totalDownloads : 0
+      });
+    }
+  }
+
+  return deltaRows.sort((left, right) => {
+    if (left.syncedAt === right.syncedAt) {
+      if (left.releasePublishedAt === right.releasePublishedAt) {
+        return left.platform.localeCompare(right.platform);
+      }
+
+      return (right.releasePublishedAt ?? "").localeCompare(left.releasePublishedAt ?? "");
+    }
+
+    return left.syncedAt.localeCompare(right.syncedAt);
+  });
+}
+
+function summarizeHistory(items) {
+  if (!items.length) {
+    historySummaryEl.textContent = "No matching history for the selected filters yet.";
+    return;
+  }
+
+  const syncRuns = new Set(items.map((item) => item.syncedAt)).size;
+  const earliest = items[0];
+  const latest = items[items.length - 1];
+
+  historySummaryEl.textContent =
+    `Showing ${items.length} history points across ${syncRuns} sync run${syncRuns === 1 ? "" : "s"}. ` +
+    `Earliest point: ${earliest.releaseTag} ${earliest.platform} at ${formatNumber(earliest.totalDownloads)}. ` +
+    `Latest point: ${latest.releaseTag} ${latest.platform} at ${formatNumber(latest.totalDownloads)}.`;
+}
+
+function summarizePlatformTrend(items) {
+  if (!platformHistorySummaryEl) {
+    return;
+  }
+
+  if (!items.length) {
+    platformHistorySummaryEl.textContent = "No platform trend data available yet.";
+    return;
+  }
+
+  const syncRuns = new Set(items.map((item) => item.syncedAt)).size;
+  const latestSync = items[items.length - 1].syncedAt;
+  const latestRows = items.filter((item) => item.syncedAt === latestSync);
+  const leader = [...latestRows].sort((left, right) => right.totalDownloads - left.totalDownloads)[0];
+
+  platformHistorySummaryEl.textContent =
+    `Aggregated platform totals across ${syncRuns} sync run${syncRuns === 1 ? "" : "s"}. ` +
+    `Latest leader: ${leader.platform} with ${formatNumber(leader.totalDownloads)} downloads.`;
+}
+
+function summarizePointDeltaHistory(deltaItems) {
+  if (!deltaHistorySummaryEl) {
+    return;
+  }
+
+  if (!deltaItems.length) {
+    deltaHistorySummaryEl.textContent = "No matching delta history for the selected filters yet.";
+    return;
+  }
+
+  const nonInitialPoints = deltaItems.filter((item) => item.totalDownloads !== 0);
+
+  if (!nonInitialPoints.length) {
+    deltaHistorySummaryEl.textContent = "Need at least two sync points to calculate per-point deltas.";
+    return;
+  }
+
+  const latestSync = deltaItems[deltaItems.length - 1].syncedAt;
+  const latestRows = deltaItems.filter((item) => item.syncedAt === latestSync);
+  const latestLeader = [...latestRows].sort((left, right) => right.totalDownloads - left.totalDownloads)[0];
+  const biggestChange = [...nonInitialPoints].sort(
+    (left, right) => Math.abs(right.totalDownloads) - Math.abs(left.totalDownloads)
+  )[0];
+
+  deltaHistorySummaryEl.textContent =
+    `Latest delta at ${formatDate(latestSync)}: ${latestLeader.releaseTag} ${latestLeader.platform} ` +
+    `${formatSignedNumber(latestLeader.totalDownloads)}. ` +
+    `Largest absolute change in this view: ${biggestChange.releaseTag} ${biggestChange.platform} ` +
+    `${formatSignedNumber(biggestChange.totalDownloads)}.`;
+}
+
+function renderLegend(container, keys, formatter) {
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = keys
+    .map(
+      (key) => `
+        <span class="legend-item">
+          <span class="legend-swatch" style="background:${platformColors[key.platform] ?? "#6c5a45"}"></span>
+          ${formatter(key)}
+        </span>
+      `
+    )
+    .join("");
+}
+
+function renderLineChart({
+  svgEl,
+  legendEl,
+  items,
+  seriesKey,
+  legendFormatter,
+  valueMode = "absolute",
+  tooltipValueFormatter = formatNumber
+}) {
+  if (!svgEl || !legendEl) {
+    return;
+  }
+
+  if (!items.length) {
+    svgEl.innerHTML = "";
+    legendEl.innerHTML = "";
+    hideChartTooltip();
+    return;
+  }
+
+  const pointsBySeries = new Map();
+
+  for (const item of items) {
+    const key = seriesKey(item);
+    const series = pointsBySeries.get(key) ?? {
+      ...item,
+      points: []
+    };
+
+    series.points.push(item);
+    pointsBySeries.set(key, series);
+  }
+
+  const seriesList = Array.from(pointsBySeries.values()).sort((left, right) => {
+    if (left.platform === right.platform) {
+      return (right.releaseTag ?? "").localeCompare(left.releaseTag ?? "");
+    }
+
+    return left.platform.localeCompare(right.platform);
+  });
+
+  const preparedSeries = seriesList.map((series) => {
+    const sortedPoints = [...series.points].sort((left, right) => left.syncedAt.localeCompare(right.syncedAt));
+    const baseline = sortedPoints[0]?.totalDownloads ?? 0;
+
+    return {
+      ...series,
+      points: sortedPoints.map((point) => ({
+        ...point,
+        chartDownloads:
+          valueMode === "delta-from-first" ? point.totalDownloads - baseline : point.totalDownloads
+      }))
+    };
+  });
+
+  const allPoints = preparedSeries.flatMap((series) => series.points);
+  const syncLabels = [...new Set(allPoints.map((item) => item.syncedAt))];
+  const syncIndexByLabel = new Map(syncLabels.map((label, index) => [label, index]));
+  const pointValues = allPoints.map((item) => item.chartDownloads);
+  const rawMinDownloads = Math.min(...pointValues);
+  const rawMaxDownloads = Math.max(...pointValues);
+  const rawRange = rawMaxDownloads - rawMinDownloads;
+  const yPadding = rawRange === 0 ? Math.max(rawMaxDownloads * 0.02, 1) : Math.max(rawRange * 0.08, 1);
+  const yMin = rawMinDownloads - yPadding;
+  const yMax = rawMaxDownloads + yPadding;
+  const yRange = Math.max(yMax - yMin, 1);
+
+  const width = 880;
+  const height = 320;
+  const padding = { top: 20, right: 20, bottom: 42, left: 64 };
+  const plotWidth = width - padding.left - padding.right;
+  const plotHeight = height - padding.top - padding.bottom;
+
+  const gridLines = 4;
+  const yTicks = Array.from({ length: gridLines + 1 }, (_, index) => {
+    return yMax - (yRange / gridLines) * index;
+  });
+
+  const xStep = syncLabels.length > 1 ? plotWidth / (syncLabels.length - 1) : 0;
+
+  const gridMarkup = yTicks
+    .map((tick, index) => {
+      const y = padding.top + (plotHeight / gridLines) * index;
+      return `
+        <line class="chart-grid" x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>
+        <text class="chart-label" x="${padding.left - 12}" y="${y + 4}" text-anchor="end">${formatNumber(Math.round(tick))}</text>
+      `;
+    })
+    .join("");
+
+  const approxLabelWidth = 112;
+  const maxXLabels = Math.max(2, Math.floor(plotWidth / approxLabelWidth));
+  const xLabelStride = syncLabels.length <= maxXLabels ? 1 : Math.ceil(syncLabels.length / maxXLabels);
+
+  const xAxisLabels = syncLabels
+    .map((label, index) => {
+      const isFirst = index === 0;
+      const isLast = index === syncLabels.length - 1;
+      const shouldShow = isFirst || isLast || index % xLabelStride === 0;
+
+      if (!shouldShow) {
+        return "";
+      }
+
+      const x = padding.left + xStep * index;
+      const text = new Intl.DateTimeFormat("en-CH", {
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      }).format(new Date(label));
+      const textAnchor = isFirst ? "start" : isLast ? "end" : "middle";
+
+      return `<text class="chart-label" x="${x}" y="${height - 12}" text-anchor="${textAnchor}">${text}</text>`;
+    })
+    .join("");
+
+  const seriesMarkup = preparedSeries
+    .map((series) => {
+      const seriesLabel = legendFormatter(series);
+      const path = series.points
+        .map((point, index) => {
+          const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
+          const y = padding.top + plotHeight - ((point.chartDownloads - yMin) / yRange) * plotHeight;
+
+          return `${index === 0 ? "M" : "L"} ${x} ${y}`;
+        })
+        .join(" ");
+
+      const dots = series.points
+        .map((point) => {
+          const x = padding.left + xStep * syncIndexByLabel.get(point.syncedAt);
+          const y = padding.top + plotHeight - ((point.chartDownloads - yMin) / yRange) * plotHeight;
+          const tooltipText =
+            `${seriesLabel} | ${formatDate(point.syncedAt)} | ` +
+            `${tooltipValueFormatter(point.totalDownloads)}`;
+          const escapedTooltip = escapeHtmlAttribute(tooltipText);
+
+          return (
+            `<circle class="chart-dot chart-dot-interactive" cx="${x}" cy="${y}" r="4.5" ` +
+            `fill="${platformColors[series.platform] ?? "#6c5a45"}" data-tooltip="${escapedTooltip}" ` +
+            `tabindex="0" role="button" aria-label="${escapedTooltip}"></circle>`
+          );
+        })
+        .join("");
+
+      return `
+        <path class="chart-line" d="${path}" stroke="${platformColors[series.platform] ?? "#6c5a45"}"></path>
+        ${dots}
+      `;
+    })
+    .join("");
+
+  svgEl.innerHTML = `
+    <line class="chart-axis" x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height - padding.bottom}"></line>
+    <line class="chart-axis" x1="${padding.left}" y1="${height - padding.bottom}" x2="${width - padding.right}" y2="${height - padding.bottom}"></line>
+    ${gridMarkup}
+    ${seriesMarkup}
+    ${xAxisLabels}
+  `;
+
+  renderLegend(legendEl, preparedSeries, legendFormatter);
+  hideChartTooltip();
+}
+
+function renderPlatformHistoryChart(data) {
+  if (!platformHistoryChartEl || !platformHistoryLegendEl || !platformHistorySummaryEl) {
+    return;
+  }
+
+  const selectedPlatform = platformFilterEl.value;
+  const dateFilteredItems = filterItemsByDateRange(data.platformTrend);
+  const items = selectedPlatform
+    ? dateFilteredItems.filter((item) => item.platform === selectedPlatform)
+    : dateFilteredItems;
+
+  summarizePlatformTrend(items);
+  renderLineChart({
+    svgEl: platformHistoryChartEl,
+    legendEl: platformHistoryLegendEl,
+    items,
+    seriesKey: (item) => item.platform,
+    legendFormatter: (item) => item.platform
+  });
+}
+
+function renderHistoryChart(data) {
+  const items = getFilteredHistory(data);
+  summarizeHistory(items);
+  renderLineChart({
+    svgEl: historyChartEl,
+    legendEl: chartLegendEl,
+    items,
+    seriesKey: (item) => `${item.releaseTag}:${item.platform}`,
+    legendFormatter: (item) => `${item.releaseTag} - ${item.platform}`
+  });
+}
+
+function renderPointDeltaHistoryChart(data) {
+  if (!deltaHistoryChartEl || !deltaHistoryLegendEl || !deltaHistorySummaryEl) {
+    return;
+  }
+
+  const seriesKey = (item) => `${item.releaseTag}:${item.platform}`;
+  const items = getFilteredHistory(data);
+  const deltaItems = buildPointDeltaHistory(items, seriesKey);
+  summarizePointDeltaHistory(deltaItems);
+  renderLineChart({
+    svgEl: deltaHistoryChartEl,
+    legendEl: deltaHistoryLegendEl,
+    items: deltaItems,
+    seriesKey,
+    legendFormatter: (item) => `${item.releaseTag} - ${item.platform}`,
+    tooltipValueFormatter: formatSignedNumber
+  });
+}
+
+function renderDashboard(data) {
+  repoNameEl.textContent = data.meta.repo;
+  latestSyncEl.textContent = data.syncRuns.length
+    ? formatDate(data.syncRuns[data.syncRuns.length - 1].syncedAt)
+    : "No sync yet";
+
+  populateFilters(data);
+  renderPlatformCards(data);
+  renderBarList(data);
+  renderCurrentTable(data);
+  renderHistoryChart(data);
+  renderPlatformHistoryChart(data);
+  renderPointDeltaHistoryChart(data);
+}
+
+async function loadDashboard() {
+  try {
+    const response = await fetch("./data/downloads.json", { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error(`Dashboard data request failed with ${response.status}`);
+    }
+
+    const rawStore = await response.json();
+    dashboardData = {
+      meta: rawStore.meta,
+      syncRuns: rawStore.syncRuns,
+      current: buildCurrentFromStore(rawStore.assetSnapshots),
+      platformTotals: buildPlatformTotalsFromStore(rawStore.assetSnapshots),
+      platformTrend: buildPlatformTrendFromStore(rawStore.assetSnapshots),
+      history: buildHistoryFromStore(rawStore.assetSnapshots)
+    };
+
+    renderDashboard(dashboardData);
+  } catch (error) {
+    console.error("Dashboard render failed:", error);
+    platformGridEl.innerHTML = createStatus(`Could not load dashboard data. ${error.message}`);
+    barListEl.innerHTML = "";
+    currentTableEl.innerHTML = "";
+
+    if (platformHistoryChartEl) {
+      platformHistoryChartEl.innerHTML = "";
+    }
+
+    if (platformHistoryLegendEl) {
+      platformHistoryLegendEl.innerHTML = "";
+    }
+
+    if (platformHistorySummaryEl) {
+      platformHistorySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+    }
+
+    if (historyChartEl) {
+      historyChartEl.innerHTML = "";
+    }
+
+    if (chartLegendEl) {
+      chartLegendEl.innerHTML = "";
+    }
+
+    if (historySummaryEl) {
+      historySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+    }
+
+    if (deltaHistoryChartEl) {
+      deltaHistoryChartEl.innerHTML = "";
+    }
+
+    if (deltaHistoryLegendEl) {
+      deltaHistoryLegendEl.innerHTML = "";
+    }
+
+    if (deltaHistorySummaryEl) {
+      deltaHistorySummaryEl.textContent = "Sync the dataset first, then refresh this page.";
+    }
+
+    repoNameEl.textContent = "Unavailable";
+    latestSyncEl.textContent = "Unavailable";
+  }
+}
+
+function renderFilteredViews() {
+  if (dashboardData) {
+    renderBarList(dashboardData);
+    renderHistoryChart(dashboardData);
+    renderPlatformHistoryChart(dashboardData);
+    renderPointDeltaHistoryChart(dashboardData);
+  }
+}
+
+platformFilterEl.addEventListener("change", renderFilteredViews);
+releaseFilterEl.addEventListener("change", renderFilteredViews);
+
+dateFromFilterEl.addEventListener("change", () => {
+  handleDateFilterInputChange();
+  renderFilteredViews();
+});
+
+dateToFilterEl.addEventListener("change", () => {
+  handleDateFilterInputChange();
+  renderFilteredViews();
+});
+
+for (const button of datePresetButtons) {
+  button.addEventListener("click", () => {
+    if (!dashboardData) {
+      return;
+    }
+
+    applyDatePreset(button.dataset.range, dashboardData);
+    renderFilteredViews();
+  });
+}
+
+loadDashboard();
+setupChartTooltipInteractions();
+updateDatePresetUi();
