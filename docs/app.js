@@ -243,16 +243,38 @@ function updateDateInputBounds(data) {
     return;
   }
 
+  dateFromFilterEl.min = bounds.minDate;
   dateFromFilterEl.max = bounds.maxDate;
+  dateToFilterEl.min = bounds.minDate;
   dateToFilterEl.max = bounds.maxDate;
+
+  if (dateFromFilterEl.value && dateFromFilterEl.value < bounds.minDate) {
+    dateFromFilterEl.value = bounds.minDate;
+  }
 
   if (dateFromFilterEl.value && dateFromFilterEl.value > bounds.maxDate) {
     dateFromFilterEl.value = bounds.maxDate;
   }
 
+  if (dateToFilterEl.value && dateToFilterEl.value < bounds.minDate) {
+    dateToFilterEl.value = bounds.minDate;
+  }
+
   if (dateToFilterEl.value && dateToFilterEl.value > bounds.maxDate) {
     dateToFilterEl.value = bounds.maxDate;
   }
+}
+
+function initializeDefaultDateRange(data) {
+  const bounds = getDateFilterBounds(data.history);
+
+  if (!bounds) {
+    return;
+  }
+
+  dateFromFilterEl.value = bounds.minDate;
+  dateToFilterEl.value = "";
+  activeDatePreset = "custom";
 }
 
 function getSelectedDateRangeMs() {
@@ -444,7 +466,7 @@ function populateFilters(data) {
   updateDateInputBounds(data);
 
   if (dateFromFilterEl.dataset.initialized !== "true") {
-    applyDatePreset("90d", data);
+    initializeDefaultDateRange(data);
     dateFromFilterEl.dataset.initialized = "true";
     dateToFilterEl.dataset.initialized = "true";
   }

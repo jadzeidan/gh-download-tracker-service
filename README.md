@@ -110,7 +110,8 @@ npm run publish:pages-data
 
 The repo now includes a GitHub Actions workflow at [.github/workflows/sync-downloads.yml](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/.github/workflows/sync-downloads.yml) that:
 
-- runs hourly
+- runs every three hours
+- historical note: data collected before the May 17, 2026 schedule change used hourly snapshots
 - can also be triggered manually with `workflow_dispatch`
 - executes `npm run sync`
 - updates both [data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/data/downloads.json) and [docs/data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/data/downloads.json)
