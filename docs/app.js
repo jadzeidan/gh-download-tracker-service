@@ -68,6 +68,17 @@ function getPlatformLabel(platform) {
   return platform;
 }
 
+function getTimestampDateKey(timestamp) {
+  const value = String(timestamp ?? "");
+  const isoMatch = /^(\d{4}-\d{2}-\d{2})/.exec(value);
+
+  if (isoMatch) {
+    return isoMatch[1];
+  }
+
+  return toDateInputValue(timestamp);
+}
+
 function toDateInputValue(dateValue) {
   const date = new Date(dateValue);
   const year = String(date.getFullYear());
@@ -190,8 +201,8 @@ function getDateFilterBounds(historyItems) {
   }
 
   return {
-    minDate: toDateInputValue(historyItems[0].syncedAt),
-    maxDate: toDateInputValue(historyItems[historyItems.length - 1].syncedAt),
+    minDate: getTimestampDateKey(historyItems[0].syncedAt),
+    maxDate: getTimestampDateKey(historyItems[historyItems.length - 1].syncedAt),
     maxDateTime: new Date(historyItems[historyItems.length - 1].syncedAt)
   };
 }
@@ -325,6 +336,21 @@ function filterItemsByDateRange(items, timestampSelector = (item) => item.synced
   });
 }
 
+function keepLastSnapshotPerDay(items, seriesKey, compareItems) {
+  const latestPoints = new Map();
+
+  for (const item of items) {
+    const key = `${getTimestampDateKey(item.syncedAt)}:${seriesKey(item)}`;
+    const existing = latestPoints.get(key);
+
+    if (!existing || item.syncedAt > existing.syncedAt) {
+      latestPoints.set(key, item);
+    }
+  }
+
+  return Array.from(latestPoints.values()).sort(compareItems);
+}
+
 function buildCurrentFromStore(assetSnapshots) {
   const latestRows = new Map();
 
@@ -398,7 +424,7 @@ function buildHistoryFromStore(assetSnapshots) {
     grouped.set(key, existing);
   }
 
-  return Array.from(grouped.values()).sort((left, right) => {
+  const compareHistoryItems = (left, right) => {
     if (left.syncedAt === right.syncedAt) {
       if (left.releasePublishedAt === right.releasePublishedAt) {
         return left.platform.localeCompare(right.platform);
@@ -408,7 +434,13 @@ function buildHistoryFromStore(assetSnapshots) {
     }
 
     return left.syncedAt.localeCompare(right.syncedAt);
-  });
+  };
+
+  return keepLastSnapshotPerDay(
+    Array.from(grouped.values()),
+    (item) => `${item.releaseTag}:${item.platform}`,
+    compareHistoryItems
+  );
 }
 
 function buildPlatformTrendFromStore(assetSnapshots) {
@@ -426,13 +458,19 @@ function buildPlatformTrendFromStore(assetSnapshots) {
     grouped.set(key, existing);
   }
 
-  return Array.from(grouped.values()).sort((left, right) => {
+  const comparePlatformTrendItems = (left, right) => {
     if (left.syncedAt === right.syncedAt) {
       return left.platform.localeCompare(right.platform);
     }
 
     return left.syncedAt.localeCompare(right.syncedAt);
-  });
+  };
+
+  return keepLastSnapshotPerDay(
+    Array.from(grouped.values()),
+    (item) => item.platform,
+    comparePlatformTrendItems
+  );
 }
 
 function populateFilters(data) {
@@ -682,12 +720,12 @@ function summarizeHistory(items) {
     return;
   }
 
-  const syncRuns = new Set(items.map((item) => item.syncedAt)).size;
+  const dayCount = new Set(items.map((item) => getTimestampDateKey(item.syncedAt))).size;
   const earliest = items[0];
   const latest = items[items.length - 1];
 
   historySummaryEl.textContent =
-    `Showing ${items.length} history points across ${syncRuns} sync run${syncRuns === 1 ? "" : "s"}. ` +
+    `Showing ${items.length} daily history points across ${dayCount} day${dayCount === 1 ? "" : "s"}. ` +
     `Earliest point: ${earliest.releaseTag} ${earliest.platform} at ${formatNumber(earliest.totalDownloads)}. ` +
     `Latest point: ${latest.releaseTag} ${latest.platform} at ${formatNumber(latest.totalDownloads)}.`;
 }
@@ -702,13 +740,13 @@ function summarizePlatformTrend(items) {
     return;
   }
 
-  const syncRuns = new Set(items.map((item) => item.syncedAt)).size;
+  const dayCount = new Set(items.map((item) => getTimestampDateKey(item.syncedAt))).size;
   const latestSync = items[items.length - 1].syncedAt;
   const latestRows = items.filter((item) => item.syncedAt === latestSync);
   const leader = [...latestRows].sort((left, right) => right.totalDownloads - left.totalDownloads)[0];
 
   platformHistorySummaryEl.textContent =
-    `Aggregated platform totals across ${syncRuns} sync run${syncRuns === 1 ? "" : "s"}. ` +
+    `Aggregated platform totals across ${dayCount} daily snapshot${dayCount === 1 ? "" : "s"}. ` +
     `Latest leader: ${leader.platform} with ${formatNumber(leader.totalDownloads)} downloads.`;
 }
 
@@ -737,7 +775,7 @@ function summarizePointDeltaHistory(deltaItems) {
   )[0];
 
   deltaHistorySummaryEl.textContent =
-    `Latest delta at ${formatDate(latestSync)}: ${latestLeader.releaseTag} ${latestLeader.platform} ` +
+    `Latest daily delta at ${formatDate(latestSync)}: ${latestLeader.releaseTag} ${latestLeader.platform} ` +
     `${formatSignedNumber(latestLeader.totalDownloads)}. ` +
     `Largest absolute change in this view: ${biggestChange.releaseTag} ${biggestChange.platform} ` +
     `${formatSignedNumber(biggestChange.totalDownloads)}.`;
@@ -853,6 +891,8 @@ function renderLineChart({
   const approxLabelWidth = 112;
   const maxXLabels = Math.max(2, Math.floor(plotWidth / approxLabelWidth));
   const xLabelStride = syncLabels.length <= maxXLabels ? 1 : Math.ceil(syncLabels.length / maxXLabels);
+  const hasMultipleYears =
+    new Set(syncLabels.map((label) => new Date(label).getFullYear())).size > 1;
 
   const xAxisLabels = syncLabels
     .map((label, index) => {
@@ -868,8 +908,7 @@ function renderLineChart({
       const text = new Intl.DateTimeFormat("en-CH", {
         month: "short",
         day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit"
+        ...(hasMultipleYears ? { year: "numeric" } : {})
       }).format(new Date(label));
       const textAnchor = isFirst ? "start" : isLast ? "end" : "middle";
 
