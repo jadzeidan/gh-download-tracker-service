@@ -144,6 +144,13 @@ h2 {
   margin-bottom: 22px;
 }
 
+.section-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
 .platform-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

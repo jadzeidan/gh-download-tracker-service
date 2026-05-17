@@ -16,6 +16,7 @@ const repoNameEl = document.querySelector("#repo-name");
 const latestSyncEl = document.querySelector("#latest-sync");
 const platformGridEl = document.querySelector("#platform-grid");
 const barListEl = document.querySelector("#bar-list");
+const leaderboardSummaryEl = document.querySelector("#leaderboard-summary");
 const releaseFilterEl = document.querySelector("#release-filter");
 const platformFilterEl = document.querySelector("#platform-filter");
 const dateFromFilterEl = document.querySelector("#date-from-filter");
@@ -58,6 +59,12 @@ function formatDate(value) {
     dateStyle: "medium",
     timeStyle: "short"
   }).format(new Date(value));
+}
+
+function formatCalendarDate(value) {
+  return new Intl.DateTimeFormat("en-CH", {
+    dateStyle: "medium"
+  }).format(new Date(`${value}T12:00:00`));
 }
 
 function createStatus(message) {
@@ -532,6 +539,15 @@ function renderPlatformCards(data) {
 }
 
 function renderBarList(data) {
+  const bounds = getDateFilterBounds(data.history);
+  const fromDateValue = dateFromFilterEl.value || bounds?.minDate || "";
+
+  if (leaderboardSummaryEl) {
+    leaderboardSummaryEl.textContent = fromDateValue
+      ? `Number of downloads for all releases since ${formatCalendarDate(fromDateValue)}`
+      : "Number of downloads for all releases";
+  }
+
   const rangeFilteredTrend = filterItemsByDateRange(data.platformTrend);
 
   if (!rangeFilteredTrend.length) {
