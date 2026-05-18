@@ -1047,6 +1047,62 @@ function renderDashboard(data) {
   renderPointDeltaHistoryChart(data);
 }
 
+function resolveSnapshotChunkPath(snapshotFileEntry) {
+  if (typeof snapshotFileEntry === "string") {
+    return snapshotFileEntry;
+  }
+
+  if (snapshotFileEntry && typeof snapshotFileEntry === "object" && typeof snapshotFileEntry.file === "string") {
+    return snapshotFileEntry.file;
+  }
+
+  return "";
+}
+
+function normalizeSnapshotChunkPayload(payload) {
+  if (Array.isArray(payload)) {
+    return payload;
+  }
+
+  if (Array.isArray(payload?.assetSnapshots)) {
+    return payload.assetSnapshots;
+  }
+
+  return [];
+}
+
+async function loadStoreSnapshots(rawStore) {
+  if (Array.isArray(rawStore.assetSnapshots)) {
+    return rawStore.assetSnapshots;
+  }
+
+  const snapshotFiles = Array.isArray(rawStore.snapshotFiles) ? rawStore.snapshotFiles : [];
+
+  if (!snapshotFiles.length) {
+    return [];
+  }
+
+  const snapshotsByChunk = await Promise.all(
+    snapshotFiles.map(async (snapshotFileEntry) => {
+      const filePath = resolveSnapshotChunkPath(snapshotFileEntry);
+
+      if (!filePath) {
+        return [];
+      }
+
+      const response = await fetch(`./data/${filePath}`, { cache: "no-store" });
+
+      if (!response.ok) {
+        throw new Error(`Snapshot chunk request failed for ${filePath} with ${response.status}`);
+      }
+
+      return normalizeSnapshotChunkPayload(await response.json());
+    })
+  );
+
+  return snapshotsByChunk.flat();
+}
+
 async function loadDashboard() {
   try {
     const response = await fetch("./data/downloads.json", { cache: "no-store" });
@@ -1056,13 +1112,15 @@ async function loadDashboard() {
     }
 
     const rawStore = await response.json();
+    const assetSnapshots = await loadStoreSnapshots(rawStore);
+
     dashboardData = {
       meta: rawStore.meta,
-      syncRuns: rawStore.syncRuns,
-      current: buildCurrentFromStore(rawStore.assetSnapshots),
-      platformTotals: buildPlatformTotalsFromStore(rawStore.assetSnapshots),
-      platformTrend: buildPlatformTrendFromStore(rawStore.assetSnapshots),
-      history: buildHistoryFromStore(rawStore.assetSnapshots)
+      syncRuns: Array.isArray(rawStore.syncRuns) ? rawStore.syncRuns : [],
+      current: buildCurrentFromStore(assetSnapshots),
+      platformTotals: buildPlatformTotalsFromStore(assetSnapshots),
+      platformTrend: buildPlatformTrendFromStore(assetSnapshots),
+      history: buildHistoryFromStore(assetSnapshots)
     };
 
     renderDashboard(dashboardData);

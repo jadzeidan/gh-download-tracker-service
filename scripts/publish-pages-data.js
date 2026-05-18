@@ -4,7 +4,7 @@ import { publishPagesData } from "../src/pages-data.js";
 async function main() {
   await initializeStore();
   await publishPagesData();
-  console.log("Published dashboard data to docs/data/downloads.json");
+  console.log("Published dashboard data index and snapshot chunks to docs/data/");
 }
 
 main().catch((error) => {

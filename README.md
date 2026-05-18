@@ -27,7 +27,7 @@ Linux download counts are stored at distribution level and aggregated to `linux`
 
 A static dashboard lives in [docs/index.html](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/index.html).
 
-It reads [docs/data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/data/downloads.json) and shows:
+It reads an index at [docs/data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/data/downloads.json), then loads monthly snapshot chunks from `docs/data/snapshots/YYYY-MM.json`, and shows:
 
 - current totals by platform
 - a platform leaderboard
@@ -114,16 +114,18 @@ The repo now includes a GitHub Actions workflow at [.github/workflows/sync-downl
 - historical note: data collected before the May 17, 2026 schedule change used hourly snapshots
 - can also be triggered manually with `workflow_dispatch`
 - executes `npm run sync`
-- updates both [data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/data/downloads.json) and [docs/data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/docs/data/downloads.json)
+- updates [data/downloads.json](/abs/path/d:/Users/Jad/github_new_pc/gh-download-tracker-service/data/downloads.json) plus chunk files in `data/snapshots/`
+- publishes matching index + chunk files to `docs/data/`
 - commits the updated snapshot files back into the repository when values change
 
 This gives you a simple time-series store without needing a separate database on day one.
+The monthly chunk layout keeps full historical data while avoiding GitHub's 100 MB single-file limit.
 
 ## GitHub Pages Setup
 
 You can host the dashboard on GitHub Pages by serving the `docs/` directory from your default branch.
 
-Once enabled, the dashboard will load `./data/downloads.json` directly from the Pages site.
+Once enabled, the dashboard will load `./data/downloads.json` and the monthly `./data/snapshots/*.json` files from the Pages site.
 
 If you want better long-term scalability later, the clean upgrade path is:
 
