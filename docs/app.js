@@ -1100,7 +1100,15 @@ async function loadStoreSnapshots(rawStore) {
     })
   );
 
-  return snapshotsByChunk.flat();
+  const snapshots = [];
+
+  for (const chunkSnapshots of snapshotsByChunk) {
+    for (const snapshot of chunkSnapshots) {
+      snapshots.push(snapshot);
+    }
+  }
+
+  return snapshots;
 }
 
 async function loadDashboard() {

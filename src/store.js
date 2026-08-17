@@ -307,7 +307,10 @@ async function loadAllSnapshotsFromIndex(filePath, index) {
   for (const snapshotFile of index.snapshotFiles) {
     const snapshotFilePath = getSnapshotAbsolutePath(filePath, snapshotFile.file);
     const snapshots = await readSnapshotFile(snapshotFilePath);
-    allSnapshots.push(...snapshots);
+
+    for (const snapshot of snapshots) {
+      allSnapshots.push(snapshot);
+    }
   }
 
   return allSnapshots;

@@ -176,3 +176,49 @@ test("writeStore writes compacted chunked store", async () => {
     "syncedAt"
   ]);
 });
+
+test("readStore reads large snapshot chunks without overflowing call arguments", async () => {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), "downloads-store-"));
+  const filePath = path.join(directory, "downloads.json");
+  const snapshotDirectory = path.join(directory, "snapshots");
+  const snapshotCount = 150_000;
+
+  await fs.mkdir(snapshotDirectory, { recursive: true });
+  await fs.writeFile(
+    filePath,
+    JSON.stringify({
+      meta: {
+        version: 2,
+        createdAt: "2026-05-01T00:00:00.000Z",
+        updatedAt: "2026-05-01T00:00:00.000Z",
+        repo: "BitBoxSwiss/bitbox-wallet-app"
+      },
+      syncRuns: [],
+      snapshotFiles: [
+        {
+          month: "2026-05",
+          file: "snapshots/2026-05.json",
+          snapshotCount
+        }
+      ]
+    })
+  );
+  await fs.writeFile(
+    path.join(snapshotDirectory, "2026-05.json"),
+    JSON.stringify({
+      month: "2026-05",
+      assetSnapshots: Array.from({ length: snapshotCount }, (_, index) =>
+        createSnapshot({
+          syncedAt: "2026-05-01T00:00:00.000Z",
+          releaseTag: "v1.0.0",
+          releaseName: "v1.0.0",
+          downloadCount: index
+        })
+      )
+    })
+  );
+
+  const store = await readStore(filePath);
+  assert.equal(store.assetSnapshots.length, snapshotCount);
+  assert.equal(store.assetSnapshots.at(-1).downloadCount, snapshotCount - 1);
+});
