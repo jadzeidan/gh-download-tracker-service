@@ -877,7 +877,7 @@ function renderLineChart({
   const rawMaxDownloads = Math.max(...pointValues);
   const rawRange = rawMaxDownloads - rawMinDownloads;
   const yPadding = rawRange === 0 ? Math.max(rawMaxDownloads * 0.02, 1) : Math.max(rawRange * 0.08, 1);
-  const yMin = rawMinDownloads - yPadding;
+  const yMin = 0;
   const yMax = rawMaxDownloads + yPadding;
   const yRange = Math.max(yMax - yMin, 1);
 
