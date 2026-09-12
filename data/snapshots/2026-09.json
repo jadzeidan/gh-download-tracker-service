@@ -243040,6 +243040,4346 @@
       "platform": "linux",
       "distribution": "deb",
       "downloadCount": 85
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.4",
+      "releaseName": "v4.51.4",
+      "releasePublishedAt": "2026-08-07T01:19:18Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.4",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 300
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.4",
+      "releaseName": "v4.51.4",
+      "releasePublishedAt": "2026-08-07T01:19:18Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.4",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 1140
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.4",
+      "releaseName": "v4.51.4",
+      "releasePublishedAt": "2026-08-07T01:19:18Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.4",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 17097
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.4",
+      "releaseName": "v4.51.4",
+      "releasePublishedAt": "2026-08-07T01:19:18Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.4",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 19293
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.4",
+      "releaseName": "v4.51.4",
+      "releasePublishedAt": "2026-08-07T01:19:18Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.4",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 1052
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.4",
+      "releaseName": "v4.51.4",
+      "releasePublishedAt": "2026-08-07T01:19:18Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.4",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2527
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.3",
+      "releaseName": "v4.51.3",
+      "releasePublishedAt": "2026-07-09T20:44:07Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.3",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 237
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.3",
+      "releaseName": "v4.51.3",
+      "releasePublishedAt": "2026-07-09T20:44:07Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.3",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 1464
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.3",
+      "releaseName": "v4.51.3",
+      "releasePublishedAt": "2026-07-09T20:44:07Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.3",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 16151
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.3",
+      "releaseName": "v4.51.3",
+      "releasePublishedAt": "2026-07-09T20:44:07Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.3",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 15201
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.3",
+      "releaseName": "v4.51.3",
+      "releasePublishedAt": "2026-07-09T20:44:07Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.3",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 941
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.3",
+      "releaseName": "v4.51.3",
+      "releasePublishedAt": "2026-07-09T20:44:07Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.3",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1823
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.2",
+      "releaseName": "v4.51.2",
+      "releasePublishedAt": "2026-07-03T07:03:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.2",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 33
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.2",
+      "releaseName": "v4.51.2",
+      "releasePublishedAt": "2026-07-03T07:03:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.2",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 445
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.2",
+      "releaseName": "v4.51.2",
+      "releasePublishedAt": "2026-07-03T07:03:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.2",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 1542
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.2",
+      "releaseName": "v4.51.2",
+      "releasePublishedAt": "2026-07-03T07:03:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.2",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 1909
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.2",
+      "releaseName": "v4.51.2",
+      "releasePublishedAt": "2026-07-03T07:03:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.2",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 117
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.2",
+      "releaseName": "v4.51.2",
+      "releasePublishedAt": "2026-07-03T07:03:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.2",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 270
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.0",
+      "releaseName": "v4.51.0",
+      "releasePublishedAt": "2026-05-12T09:06:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 269
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.0",
+      "releaseName": "v4.51.0",
+      "releasePublishedAt": "2026-05-12T09:06:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 2499
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.0",
+      "releaseName": "v4.51.0",
+      "releasePublishedAt": "2026-05-12T09:06:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 18692
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.0",
+      "releaseName": "v4.51.0",
+      "releasePublishedAt": "2026-05-12T09:06:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 12795
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.0",
+      "releaseName": "v4.51.0",
+      "releasePublishedAt": "2026-05-12T09:06:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 1005
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.51.0",
+      "releaseName": "v4.51.0",
+      "releasePublishedAt": "2026-05-12T09:06:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.51.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1707
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.1",
+      "releaseName": "v4.50.1",
+      "releasePublishedAt": "2026-01-27T16:12:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 503
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.1",
+      "releaseName": "v4.50.1",
+      "releasePublishedAt": "2026-01-27T16:12:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 1518
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.1",
+      "releaseName": "v4.50.1",
+      "releasePublishedAt": "2026-01-27T16:12:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.1",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 24186
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.1",
+      "releaseName": "v4.50.1",
+      "releasePublishedAt": "2026-01-27T16:12:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 20520
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.1",
+      "releaseName": "v4.50.1",
+      "releasePublishedAt": "2026-01-27T16:12:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 1756
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.1",
+      "releaseName": "v4.50.1",
+      "releasePublishedAt": "2026-01-27T16:12:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2797
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.0",
+      "releaseName": "v4.50.0",
+      "releasePublishedAt": "2026-01-21T14:43:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 36
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.0",
+      "releaseName": "v4.50.0",
+      "releasePublishedAt": "2026-01-21T14:43:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 239
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.0",
+      "releaseName": "v4.50.0",
+      "releasePublishedAt": "2026-01-21T14:43:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 1053
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.0",
+      "releaseName": "v4.50.0",
+      "releasePublishedAt": "2026-01-21T14:43:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 1675
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.0",
+      "releaseName": "v4.50.0",
+      "releasePublishedAt": "2026-01-21T14:43:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 102
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.50.0",
+      "releaseName": "v4.50.0",
+      "releasePublishedAt": "2026-01-21T14:43:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.50.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 209
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.49.0",
+      "releaseName": "v4.49.0",
+      "releasePublishedAt": "2025-11-04T13:29:45Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.49.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 442
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.49.0",
+      "releaseName": "v4.49.0",
+      "releasePublishedAt": "2025-11-04T13:29:45Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.49.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 1179
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.49.0",
+      "releaseName": "v4.49.0",
+      "releasePublishedAt": "2025-11-04T13:29:45Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.49.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 13823
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.49.0",
+      "releaseName": "v4.49.0",
+      "releasePublishedAt": "2025-11-04T13:29:45Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.49.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 23914
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.49.0",
+      "releaseName": "v4.49.0",
+      "releasePublishedAt": "2025-11-04T13:29:45Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.49.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 1535
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.49.0",
+      "releaseName": "v4.49.0",
+      "releasePublishedAt": "2025-11-04T13:29:45Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.49.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 3103
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.8",
+      "releaseName": "v4.48.8",
+      "releasePublishedAt": "2025-10-14T17:07:11Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.8",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 4752
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.6",
+      "releaseName": "v4.48.6",
+      "releasePublishedAt": "2025-09-30T14:19:16Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.6",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 812
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.5",
+      "releaseName": "v4.48.5",
+      "releasePublishedAt": "2025-09-30T07:57:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.5",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 221
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.5",
+      "releaseName": "v4.48.5",
+      "releasePublishedAt": "2025-09-30T07:57:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.5",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 80
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.5",
+      "releaseName": "v4.48.5",
+      "releasePublishedAt": "2025-09-30T07:57:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.5",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 2912
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.5",
+      "releaseName": "v4.48.5",
+      "releasePublishedAt": "2025-09-30T07:57:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.5",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 12386
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.5",
+      "releaseName": "v4.48.5",
+      "releasePublishedAt": "2025-09-30T07:57:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.5",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 804
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.5",
+      "releaseName": "v4.48.5",
+      "releasePublishedAt": "2025-09-30T07:57:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.5",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1589
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.4",
+      "releaseName": "v4.48.4",
+      "releasePublishedAt": "2025-08-19T09:34:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.4",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 6653
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.3",
+      "releaseName": "v4.48.3",
+      "releasePublishedAt": "2025-08-11T11:58:37Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.3",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 951
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.1",
+      "releaseName": "v4.48.1",
+      "releasePublishedAt": "2025-07-25T09:35:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 331
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.1",
+      "releaseName": "v4.48.1",
+      "releasePublishedAt": "2025-07-25T09:35:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 990
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.1",
+      "releaseName": "v4.48.1",
+      "releasePublishedAt": "2025-07-25T09:35:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.1",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 6377
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.1",
+      "releaseName": "v4.48.1",
+      "releasePublishedAt": "2025-07-25T09:35:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 22109
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.1",
+      "releaseName": "v4.48.1",
+      "releasePublishedAt": "2025-07-25T09:35:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 373
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.48.1",
+      "releaseName": "v4.48.1",
+      "releasePublishedAt": "2025-07-25T09:35:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.48.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2534
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.3",
+      "releaseName": "v4.47.3",
+      "releasePublishedAt": "2025-05-26T08:58:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.3",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 207
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.3",
+      "releaseName": "v4.47.3",
+      "releasePublishedAt": "2025-05-26T08:58:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.3",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 743
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.3",
+      "releaseName": "v4.47.3",
+      "releasePublishedAt": "2025-05-26T08:58:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.3",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 7680
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.3",
+      "releaseName": "v4.47.3",
+      "releasePublishedAt": "2025-05-26T08:58:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.3",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 14101
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.3",
+      "releaseName": "v4.47.3",
+      "releasePublishedAt": "2025-05-26T08:58:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.3",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 892
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.3",
+      "releaseName": "v4.47.3",
+      "releasePublishedAt": "2025-05-26T08:58:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.3",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1555
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.2",
+      "releaseName": "v4.47.2",
+      "releasePublishedAt": "2025-03-18T09:53:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.2",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 241
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.2",
+      "releaseName": "v4.47.2",
+      "releasePublishedAt": "2025-03-18T09:53:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.2",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 1285
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.2",
+      "releaseName": "v4.47.2",
+      "releasePublishedAt": "2025-03-18T09:53:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.2",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2212
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.1",
+      "releaseName": "v4.47.1",
+      "releasePublishedAt": "2025-03-12T10:36:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 134
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.1",
+      "releaseName": "v4.47.1",
+      "releasePublishedAt": "2025-03-12T10:36:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 233
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.1",
+      "releaseName": "v4.47.1",
+      "releasePublishedAt": "2025-03-12T10:36:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 693
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.0",
+      "releaseName": "v4.47.0",
+      "releasePublishedAt": "2025-03-09T20:28:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 31
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.0",
+      "releaseName": "v4.47.0",
+      "releasePublishedAt": "2025-03-09T20:28:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 1237
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.0",
+      "releaseName": "v4.47.0",
+      "releasePublishedAt": "2025-03-09T20:28:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 14306
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.0",
+      "releaseName": "v4.47.0",
+      "releasePublishedAt": "2025-03-09T20:28:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 24786
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.0",
+      "releaseName": "v4.47.0",
+      "releasePublishedAt": "2025-03-09T20:28:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 128
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.47.0",
+      "releaseName": "v4.47.0",
+      "releasePublishedAt": "2025-03-09T20:28:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.47.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 218
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.3",
+      "releaseName": "v4.46.3",
+      "releasePublishedAt": "2024-11-26T13:28:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.3",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 506
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.3",
+      "releaseName": "v4.46.3",
+      "releasePublishedAt": "2024-11-26T13:28:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.3",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 1297
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.3",
+      "releaseName": "v4.46.3",
+      "releasePublishedAt": "2024-11-26T13:28:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.3",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 3758
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.2",
+      "releaseName": "v4.46.2",
+      "releasePublishedAt": "2024-11-22T14:23:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.2",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 40
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.2",
+      "releaseName": "v4.46.2",
+      "releasePublishedAt": "2024-11-22T14:23:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.2",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 112
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.2",
+      "releaseName": "v4.46.2",
+      "releasePublishedAt": "2024-11-22T14:23:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.2",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 372
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.1",
+      "releaseName": "v4.46.1",
+      "releasePublishedAt": "2024-11-21T12:04:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 1478
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.0",
+      "releaseName": "v4.46.0",
+      "releasePublishedAt": "2024-11-18T15:54:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 59
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.0",
+      "releaseName": "v4.46.0",
+      "releasePublishedAt": "2024-11-18T15:54:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 128
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.0",
+      "releaseName": "v4.46.0",
+      "releasePublishedAt": "2024-11-18T15:54:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 21794
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.0",
+      "releaseName": "v4.46.0",
+      "releasePublishedAt": "2024-11-18T15:54:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 40010
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.0",
+      "releaseName": "v4.46.0",
+      "releasePublishedAt": "2024-11-18T15:54:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 140
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.46.0",
+      "releaseName": "v4.46.0",
+      "releasePublishedAt": "2024-11-18T15:54:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.46.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 377
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.45.0",
+      "releaseName": "v4.45.0",
+      "releasePublishedAt": "2024-10-10T05:06:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.45.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 177
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.45.0",
+      "releaseName": "v4.45.0",
+      "releasePublishedAt": "2024-10-10T05:06:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.45.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 298
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.45.0",
+      "releaseName": "v4.45.0",
+      "releasePublishedAt": "2024-10-10T05:06:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.45.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 9063
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.45.0",
+      "releaseName": "v4.45.0",
+      "releasePublishedAt": "2024-10-10T05:06:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.45.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 16846
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.45.0",
+      "releaseName": "v4.45.0",
+      "releasePublishedAt": "2024-10-10T05:06:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.45.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 587
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.45.0",
+      "releaseName": "v4.45.0",
+      "releasePublishedAt": "2024-10-10T05:06:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.45.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1603
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.44.1",
+      "releaseName": "v4.44.1",
+      "releasePublishedAt": "2024-10-02T08:27:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.44.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 128
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.44.1",
+      "releaseName": "v4.44.1",
+      "releasePublishedAt": "2024-10-02T08:27:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.44.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 251
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.44.1",
+      "releaseName": "v4.44.1",
+      "releasePublishedAt": "2024-10-02T08:27:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.44.1",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 5112
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.44.1",
+      "releaseName": "v4.44.1",
+      "releasePublishedAt": "2024-10-02T08:27:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.44.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 308
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.44.1",
+      "releaseName": "v4.44.1",
+      "releasePublishedAt": "2024-10-02T08:27:55Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.44.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1091
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.43.0",
+      "releaseName": "v4.43.0",
+      "releasePublishedAt": "2024-07-09T11:09:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.43.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 274
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.43.0",
+      "releaseName": "v4.43.0",
+      "releasePublishedAt": "2024-07-09T11:09:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.43.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 417
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.43.0",
+      "releaseName": "v4.43.0",
+      "releasePublishedAt": "2024-07-09T11:09:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.43.0",
+      "platform": "macos",
+      "distribution": "dmg",
+      "downloadCount": 12095
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.43.0",
+      "releaseName": "v4.43.0",
+      "releasePublishedAt": "2024-07-09T11:09:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.43.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 22435
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.43.0",
+      "releaseName": "v4.43.0",
+      "releasePublishedAt": "2024-07-09T11:09:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.43.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 833
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.43.0",
+      "releaseName": "v4.43.0",
+      "releasePublishedAt": "2024-07-09T11:09:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.43.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2509
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.1",
+      "releaseName": "v4.42.1",
+      "releasePublishedAt": "2024-06-17T12:36:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 64
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.1",
+      "releaseName": "v4.42.1",
+      "releasePublishedAt": "2024-06-17T12:36:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 118
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.1",
+      "releaseName": "v4.42.1",
+      "releasePublishedAt": "2024-06-17T12:36:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 2003
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.1",
+      "releaseName": "v4.42.1",
+      "releasePublishedAt": "2024-06-17T12:36:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 5447
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.1",
+      "releaseName": "v4.42.1",
+      "releasePublishedAt": "2024-06-17T12:36:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 215
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.1",
+      "releaseName": "v4.42.1",
+      "releasePublishedAt": "2024-06-17T12:36:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 513
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.0",
+      "releaseName": "v4.42.0",
+      "releasePublishedAt": "2024-04-22T10:28:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 224
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.0",
+      "releaseName": "v4.42.0",
+      "releasePublishedAt": "2024-04-22T10:28:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 416
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.0",
+      "releaseName": "v4.42.0",
+      "releasePublishedAt": "2024-04-22T10:28:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 9423
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.0",
+      "releaseName": "v4.42.0",
+      "releasePublishedAt": "2024-04-22T10:28:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 18711
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.0",
+      "releaseName": "v4.42.0",
+      "releasePublishedAt": "2024-04-22T10:28:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 758
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.42.0",
+      "releaseName": "v4.42.0",
+      "releasePublishedAt": "2024-04-22T10:28:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.42.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1873
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.41.0",
+      "releaseName": "v4.41.0",
+      "releasePublishedAt": "2024-02-08T11:45:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.41.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 334
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.41.0",
+      "releaseName": "v4.41.0",
+      "releasePublishedAt": "2024-02-08T11:45:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.41.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 291
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.41.0",
+      "releaseName": "v4.41.0",
+      "releasePublishedAt": "2024-02-08T11:45:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.41.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 14478
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.41.0",
+      "releaseName": "v4.41.0",
+      "releasePublishedAt": "2024-02-08T11:45:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.41.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 26210
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.41.0",
+      "releaseName": "v4.41.0",
+      "releasePublishedAt": "2024-02-08T11:45:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.41.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 771
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.41.0",
+      "releaseName": "v4.41.0",
+      "releasePublishedAt": "2024-02-08T11:45:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.41.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2683
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.40.0",
+      "releaseName": "v4.40.0",
+      "releasePublishedAt": "2023-12-18T16:08:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.40.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 219
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.40.0",
+      "releaseName": "v4.40.0",
+      "releasePublishedAt": "2023-12-18T16:08:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.40.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 296
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.40.0",
+      "releaseName": "v4.40.0",
+      "releasePublishedAt": "2023-12-18T16:08:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.40.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 9847
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.40.0",
+      "releaseName": "v4.40.0",
+      "releasePublishedAt": "2023-12-18T16:08:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.40.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 17685
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.40.0",
+      "releaseName": "v4.40.0",
+      "releasePublishedAt": "2023-12-18T16:08:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.40.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 537
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.40.0",
+      "releaseName": "v4.40.0",
+      "releasePublishedAt": "2023-12-18T16:08:24Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.40.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1873
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.39.0",
+      "releaseName": "v4.39.0",
+      "releasePublishedAt": "2023-08-23T11:26:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.39.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 348
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.39.0",
+      "releaseName": "v4.39.0",
+      "releasePublishedAt": "2023-08-23T11:26:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.39.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 313
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.39.0",
+      "releaseName": "v4.39.0",
+      "releasePublishedAt": "2023-08-23T11:26:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.39.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 13282
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.39.0",
+      "releaseName": "v4.39.0",
+      "releasePublishedAt": "2023-08-23T11:26:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.39.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 25843
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.39.0",
+      "releaseName": "v4.39.0",
+      "releasePublishedAt": "2023-08-23T11:26:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.39.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 888
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.39.0",
+      "releaseName": "v4.39.0",
+      "releasePublishedAt": "2023-08-23T11:26:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.39.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 2754
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.38.0",
+      "releaseName": "v4.38.0",
+      "releasePublishedAt": "2023-06-29T10:51:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.38.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 274
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.38.0",
+      "releaseName": "v4.38.0",
+      "releasePublishedAt": "2023-06-29T10:51:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.38.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 157
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.38.0",
+      "releaseName": "v4.38.0",
+      "releasePublishedAt": "2023-06-29T10:51:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.38.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 6551
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.38.0",
+      "releaseName": "v4.38.0",
+      "releasePublishedAt": "2023-06-29T10:51:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.38.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 14296
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.38.0",
+      "releaseName": "v4.38.0",
+      "releasePublishedAt": "2023-06-29T10:51:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.38.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 396
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.38.0",
+      "releaseName": "v4.38.0",
+      "releasePublishedAt": "2023-06-29T10:51:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.38.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1590
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.1",
+      "releaseName": "v4.37.1",
+      "releasePublishedAt": "2023-06-19T04:56:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 48
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.1",
+      "releaseName": "v4.37.1",
+      "releasePublishedAt": "2023-06-19T04:56:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 74
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.1",
+      "releaseName": "v4.37.1",
+      "releasePublishedAt": "2023-06-19T04:56:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 913
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.1",
+      "releaseName": "v4.37.1",
+      "releasePublishedAt": "2023-06-19T04:56:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 1747
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.1",
+      "releaseName": "v4.37.1",
+      "releasePublishedAt": "2023-06-19T04:56:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 73
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.1",
+      "releaseName": "v4.37.1",
+      "releasePublishedAt": "2023-06-19T04:56:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 220
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.0",
+      "releaseName": "v4.37.0",
+      "releasePublishedAt": "2023-04-13T00:25:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 237
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.0",
+      "releaseName": "v4.37.0",
+      "releasePublishedAt": "2023-04-13T00:25:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 157
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.0",
+      "releaseName": "v4.37.0",
+      "releasePublishedAt": "2023-04-13T00:25:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 6904
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.0",
+      "releaseName": "v4.37.0",
+      "releasePublishedAt": "2023-04-13T00:25:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 12638
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.0",
+      "releaseName": "v4.37.0",
+      "releasePublishedAt": "2023-04-13T00:25:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 469
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.37.0",
+      "releaseName": "v4.37.0",
+      "releasePublishedAt": "2023-04-13T00:25:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.37.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1424
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.1",
+      "releaseName": "v4.36.1",
+      "releasePublishedAt": "2023-03-17T08:34:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 5593
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.0",
+      "releaseName": "v4.36.0",
+      "releasePublishedAt": "2023-03-08T10:53:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 159
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.0",
+      "releaseName": "v4.36.0",
+      "releasePublishedAt": "2023-03-08T10:53:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 107
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.0",
+      "releaseName": "v4.36.0",
+      "releasePublishedAt": "2023-03-08T10:53:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 5353
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.0",
+      "releaseName": "v4.36.0",
+      "releasePublishedAt": "2023-03-08T10:53:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 9088
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.0",
+      "releaseName": "v4.36.0",
+      "releasePublishedAt": "2023-03-08T10:53:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 310
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.36.0",
+      "releaseName": "v4.36.0",
+      "releasePublishedAt": "2023-03-08T10:53:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.36.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1076
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.1",
+      "releaseName": "v4.35.1",
+      "releasePublishedAt": "2022-12-06T09:21:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 192
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.1",
+      "releaseName": "v4.35.1",
+      "releasePublishedAt": "2022-12-06T09:21:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 138
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.1",
+      "releaseName": "v4.35.1",
+      "releasePublishedAt": "2022-12-06T09:21:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 7065
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.1",
+      "releaseName": "v4.35.1",
+      "releasePublishedAt": "2022-12-06T09:21:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 14968
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.1",
+      "releaseName": "v4.35.1",
+      "releasePublishedAt": "2022-12-06T09:21:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 412
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.1",
+      "releaseName": "v4.35.1",
+      "releasePublishedAt": "2022-12-06T09:21:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1534
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.0",
+      "releaseName": "v4.35.0",
+      "releasePublishedAt": "2022-11-17T10:41:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 165
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.0",
+      "releaseName": "v4.35.0",
+      "releasePublishedAt": "2022-11-17T10:41:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 60
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.0",
+      "releaseName": "v4.35.0",
+      "releasePublishedAt": "2022-11-17T10:41:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 3288
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.0",
+      "releaseName": "v4.35.0",
+      "releasePublishedAt": "2022-11-17T10:41:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 8787
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.0",
+      "releaseName": "v4.35.0",
+      "releasePublishedAt": "2022-11-17T10:41:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 236
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.35.0",
+      "releaseName": "v4.35.0",
+      "releasePublishedAt": "2022-11-17T10:41:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.35.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 642
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.34.0",
+      "releaseName": "v4.34.0",
+      "releasePublishedAt": "2022-06-20T15:49:33Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.34.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 269
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.34.0",
+      "releaseName": "v4.34.0",
+      "releasePublishedAt": "2022-06-20T15:49:33Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.34.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 147
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.34.0",
+      "releaseName": "v4.34.0",
+      "releasePublishedAt": "2022-06-20T15:49:33Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.34.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 9451
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.34.0",
+      "releaseName": "v4.34.0",
+      "releasePublishedAt": "2022-06-20T15:49:33Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.34.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 21445
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.34.0",
+      "releaseName": "v4.34.0",
+      "releasePublishedAt": "2022-06-20T15:49:33Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.34.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 617
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.34.0",
+      "releaseName": "v4.34.0",
+      "releasePublishedAt": "2022-06-20T15:49:33Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.34.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1843
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.33.0",
+      "releaseName": "v4.33.0",
+      "releasePublishedAt": "2022-05-13T14:15:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.33.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 46
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.33.0",
+      "releaseName": "v4.33.0",
+      "releasePublishedAt": "2022-05-13T14:15:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.33.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 54
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.33.0",
+      "releaseName": "v4.33.0",
+      "releasePublishedAt": "2022-05-13T14:15:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.33.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 906
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.33.0",
+      "releaseName": "v4.33.0",
+      "releasePublishedAt": "2022-05-13T14:15:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.33.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 5320
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.33.0",
+      "releaseName": "v4.33.0",
+      "releasePublishedAt": "2022-05-13T14:15:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.33.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 75
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.33.0",
+      "releaseName": "v4.33.0",
+      "releasePublishedAt": "2022-05-13T14:15:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.33.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 214
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.1",
+      "releaseName": "v4.32.1",
+      "releasePublishedAt": "2022-04-21T09:52:00Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 70
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.0",
+      "releaseName": "v4.32.0",
+      "releasePublishedAt": "2022-03-15T23:24:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 568
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.0",
+      "releaseName": "v4.32.0",
+      "releasePublishedAt": "2022-03-15T23:24:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 98
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.0",
+      "releaseName": "v4.32.0",
+      "releasePublishedAt": "2022-03-15T23:24:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 5988
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.0",
+      "releaseName": "v4.32.0",
+      "releasePublishedAt": "2022-03-15T23:24:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 14640
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.0",
+      "releaseName": "v4.32.0",
+      "releasePublishedAt": "2022-03-15T23:24:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 438
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.32.0",
+      "releaseName": "v4.32.0",
+      "releasePublishedAt": "2022-03-15T23:24:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.32.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1397
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.1",
+      "releaseName": "v4.31.1",
+      "releasePublishedAt": "2022-02-08T13:02:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 166
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.1",
+      "releaseName": "v4.31.1",
+      "releasePublishedAt": "2022-02-08T13:02:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 80
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.1",
+      "releaseName": "v4.31.1",
+      "releasePublishedAt": "2022-02-08T13:02:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 3511
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.1",
+      "releaseName": "v4.31.1",
+      "releasePublishedAt": "2022-02-08T13:02:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 10641
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.1",
+      "releaseName": "v4.31.1",
+      "releasePublishedAt": "2022-02-08T13:02:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 279
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.1",
+      "releaseName": "v4.31.1",
+      "releasePublishedAt": "2022-02-08T13:02:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 767
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.0",
+      "releaseName": "v4.31.0",
+      "releasePublishedAt": "2022-01-18T14:02:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 84
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.0",
+      "releaseName": "v4.31.0",
+      "releasePublishedAt": "2022-01-18T14:02:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 93
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.0",
+      "releaseName": "v4.31.0",
+      "releasePublishedAt": "2022-01-18T14:02:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 2588
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.0",
+      "releaseName": "v4.31.0",
+      "releasePublishedAt": "2022-01-18T14:02:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 8373
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.0",
+      "releaseName": "v4.31.0",
+      "releasePublishedAt": "2022-01-18T14:02:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 213
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.31.0",
+      "releaseName": "v4.31.0",
+      "releasePublishedAt": "2022-01-18T14:02:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.31.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 605
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.1",
+      "releaseName": "v4.30.1",
+      "releasePublishedAt": "2021-11-17T15:16:10Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 93
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.0",
+      "releaseName": "v4.30.0",
+      "releasePublishedAt": "2021-11-17T13:12:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 137
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.0",
+      "releaseName": "v4.30.0",
+      "releasePublishedAt": "2021-11-17T13:12:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 54
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.0",
+      "releaseName": "v4.30.0",
+      "releasePublishedAt": "2021-11-17T13:12:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 4319
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.0",
+      "releaseName": "v4.30.0",
+      "releasePublishedAt": "2021-11-17T13:12:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 9027
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.0",
+      "releaseName": "v4.30.0",
+      "releasePublishedAt": "2021-11-17T13:12:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 322
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.30.0",
+      "releaseName": "v4.30.0",
+      "releasePublishedAt": "2021-11-17T13:12:28Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.30.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1013
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.1",
+      "releaseName": "v4.29.1",
+      "releasePublishedAt": "2021-09-07T14:10:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 125
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.1",
+      "releaseName": "v4.29.1",
+      "releasePublishedAt": "2021-09-07T14:10:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 70
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.1",
+      "releaseName": "v4.29.1",
+      "releasePublishedAt": "2021-09-07T14:10:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 3392
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.1",
+      "releaseName": "v4.29.1",
+      "releasePublishedAt": "2021-09-07T14:10:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 10592
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.1",
+      "releaseName": "v4.29.1",
+      "releasePublishedAt": "2021-09-07T14:10:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 278
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.1",
+      "releaseName": "v4.29.1",
+      "releasePublishedAt": "2021-09-07T14:10:04Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 1179
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.0",
+      "releaseName": "v4.29.0",
+      "releasePublishedAt": "2021-08-03T16:49:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 86
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.0",
+      "releaseName": "v4.29.0",
+      "releasePublishedAt": "2021-08-03T16:49:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 63
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.0",
+      "releaseName": "v4.29.0",
+      "releasePublishedAt": "2021-08-03T16:49:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 2795
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.0",
+      "releaseName": "v4.29.0",
+      "releasePublishedAt": "2021-08-03T16:49:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 8780
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.0",
+      "releaseName": "v4.29.0",
+      "releasePublishedAt": "2021-08-03T16:49:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 219
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.29.0",
+      "releaseName": "v4.29.0",
+      "releasePublishedAt": "2021-08-03T16:49:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.29.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 659
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.2",
+      "releaseName": "Release v4.28.2",
+      "releasePublishedAt": "2021-06-03T14:52:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.2",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 81
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.2",
+      "releaseName": "Release v4.28.2",
+      "releasePublishedAt": "2021-06-03T14:52:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.2",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 76
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.2",
+      "releaseName": "Release v4.28.2",
+      "releasePublishedAt": "2021-06-03T14:52:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.2",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 3357
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.2",
+      "releaseName": "Release v4.28.2",
+      "releasePublishedAt": "2021-06-03T14:52:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.2",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 9967
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.2",
+      "releaseName": "Release v4.28.2",
+      "releasePublishedAt": "2021-06-03T14:52:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.2",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 227
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.2",
+      "releaseName": "Release v4.28.2",
+      "releasePublishedAt": "2021-06-03T14:52:50Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.2",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 731
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.1",
+      "releaseName": "Release v4.28.1",
+      "releasePublishedAt": "2021-05-28T23:22:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 33
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.1",
+      "releaseName": "Release v4.28.1",
+      "releasePublishedAt": "2021-05-28T23:22:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 46
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.1",
+      "releaseName": "Release v4.28.1",
+      "releasePublishedAt": "2021-05-28T23:22:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 705
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.1",
+      "releaseName": "Release v4.28.1",
+      "releasePublishedAt": "2021-05-28T23:22:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 2124
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.1",
+      "releaseName": "Release v4.28.1",
+      "releasePublishedAt": "2021-05-28T23:22:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 70
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.1",
+      "releaseName": "Release v4.28.1",
+      "releasePublishedAt": "2021-05-28T23:22:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 156
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.0",
+      "releaseName": "Release v4.28.0",
+      "releasePublishedAt": "2021-05-27T12:59:42Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 26
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.0",
+      "releaseName": "Release v4.28.0",
+      "releasePublishedAt": "2021-05-27T12:59:42Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 40
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.0",
+      "releaseName": "Release v4.28.0",
+      "releasePublishedAt": "2021-05-27T12:59:42Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 260
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.0",
+      "releaseName": "Release v4.28.0",
+      "releasePublishedAt": "2021-05-27T12:59:42Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 410
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.0",
+      "releaseName": "Release v4.28.0",
+      "releasePublishedAt": "2021-05-27T12:59:42Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 40
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.28.0",
+      "releaseName": "Release v4.28.0",
+      "releasePublishedAt": "2021-05-27T12:59:42Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.28.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 68
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.27.0",
+      "releaseName": "Release v4.27.0",
+      "releasePublishedAt": "2021-03-22T15:02:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.27.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 91
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.27.0",
+      "releaseName": "Release v4.27.0",
+      "releasePublishedAt": "2021-03-22T15:02:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.27.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 63
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.27.0",
+      "releaseName": "Release v4.27.0",
+      "releasePublishedAt": "2021-03-22T15:02:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.27.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 3739
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.27.0",
+      "releaseName": "Release v4.27.0",
+      "releasePublishedAt": "2021-03-22T15:02:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.27.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 7771
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.27.0",
+      "releaseName": "Release v4.27.0",
+      "releasePublishedAt": "2021-03-22T15:02:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.27.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 230
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.27.0",
+      "releaseName": "Release v4.27.0",
+      "releasePublishedAt": "2021-03-22T15:02:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.27.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 746
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.26.0",
+      "releaseName": "Release v4.26.0",
+      "releasePublishedAt": "2021-02-25T18:42:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.26.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 52
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.26.0",
+      "releaseName": "Release v4.26.0",
+      "releasePublishedAt": "2021-02-25T18:42:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.26.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 54
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.26.0",
+      "releaseName": "Release v4.26.0",
+      "releasePublishedAt": "2021-02-25T18:42:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.26.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 1457
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.26.0",
+      "releaseName": "Release v4.26.0",
+      "releasePublishedAt": "2021-02-25T18:42:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.26.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 3126
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.26.0",
+      "releaseName": "Release v4.26.0",
+      "releasePublishedAt": "2021-02-25T18:42:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.26.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 98
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.26.0",
+      "releaseName": "Release v4.26.0",
+      "releasePublishedAt": "2021-02-25T18:42:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.26.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 376
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.25.0",
+      "releaseName": "Release v4.25.0",
+      "releasePublishedAt": "2021-01-27T12:26:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.25.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 61
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.25.0",
+      "releaseName": "Release v4.25.0",
+      "releasePublishedAt": "2021-01-27T12:26:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.25.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 67
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.25.0",
+      "releaseName": "Release v4.25.0",
+      "releasePublishedAt": "2021-01-27T12:26:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.25.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 1554
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.25.0",
+      "releaseName": "Release v4.25.0",
+      "releasePublishedAt": "2021-01-27T12:26:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.25.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 3316
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.25.0",
+      "releaseName": "Release v4.25.0",
+      "releasePublishedAt": "2021-01-27T12:26:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.25.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 124
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.25.0",
+      "releaseName": "Release v4.25.0",
+      "releasePublishedAt": "2021-01-27T12:26:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.25.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 387
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.1",
+      "releaseName": "Release v4.24.1",
+      "releasePublishedAt": "2020-12-12T15:00:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 65
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.1",
+      "releaseName": "Release v4.24.1",
+      "releasePublishedAt": "2020-12-12T15:00:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 63
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.1",
+      "releaseName": "Release v4.24.1",
+      "releasePublishedAt": "2020-12-12T15:00:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 1435
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.1",
+      "releaseName": "Release v4.24.1",
+      "releasePublishedAt": "2020-12-12T15:00:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 3047
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.1",
+      "releaseName": "Release v4.24.1",
+      "releasePublishedAt": "2020-12-12T15:00:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 149
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.1",
+      "releaseName": "Release v4.24.1",
+      "releasePublishedAt": "2020-12-12T15:00:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 428
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.0",
+      "releaseName": "Release v4.24.0",
+      "releasePublishedAt": "2020-12-03T16:33:43Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 30
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.0",
+      "releaseName": "Release v4.24.0",
+      "releasePublishedAt": "2020-12-03T16:33:43Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 48
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.0",
+      "releaseName": "Release v4.24.0",
+      "releasePublishedAt": "2020-12-03T16:33:43Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 263
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.0",
+      "releaseName": "Release v4.24.0",
+      "releasePublishedAt": "2020-12-03T16:33:43Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 472
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.0",
+      "releaseName": "Release v4.24.0",
+      "releasePublishedAt": "2020-12-03T16:33:43Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 55
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.24.0",
+      "releaseName": "Release v4.24.0",
+      "releasePublishedAt": "2020-12-03T16:33:43Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.24.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 101
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.23.0",
+      "releaseName": "Release v4.23.0",
+      "releasePublishedAt": "2020-10-20T21:16:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.23.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 46
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.23.0",
+      "releaseName": "Release v4.23.0",
+      "releasePublishedAt": "2020-10-20T21:16:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.23.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 35
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.23.0",
+      "releaseName": "Release v4.23.0",
+      "releasePublishedAt": "2020-10-20T21:16:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.23.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 684
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.23.0",
+      "releaseName": "Release v4.23.0",
+      "releasePublishedAt": "2020-10-20T21:16:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.23.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 1227
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.23.0",
+      "releaseName": "Release v4.23.0",
+      "releasePublishedAt": "2020-10-20T21:16:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.23.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 113
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.23.0",
+      "releaseName": "Release v4.23.0",
+      "releasePublishedAt": "2020-10-20T21:16:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.23.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 341
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.22.0",
+      "releaseName": "Release v4.22.0",
+      "releasePublishedAt": "2020-09-22T16:46:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.22.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 36
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.22.0",
+      "releaseName": "Release v4.22.0",
+      "releasePublishedAt": "2020-09-22T16:46:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.22.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 22
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.22.0",
+      "releaseName": "Release v4.22.0",
+      "releasePublishedAt": "2020-09-22T16:46:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.22.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 305
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.22.0",
+      "releaseName": "Release v4.22.0",
+      "releasePublishedAt": "2020-09-22T16:46:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.22.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 508
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.22.0",
+      "releaseName": "Release v4.22.0",
+      "releasePublishedAt": "2020-09-22T16:46:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.22.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 52
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.22.0",
+      "releaseName": "Release v4.22.0",
+      "releasePublishedAt": "2020-09-22T16:46:46Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.22.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 137
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.21.1",
+      "releaseName": "Release v4.21.1",
+      "releasePublishedAt": "2020-08-19T13:03:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.21.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 27
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.21.1",
+      "releaseName": "Release v4.21.1",
+      "releasePublishedAt": "2020-08-19T13:03:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.21.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 29
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.21.1",
+      "releaseName": "Release v4.21.1",
+      "releasePublishedAt": "2020-08-19T13:03:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.21.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 297
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.21.1",
+      "releaseName": "Release v4.21.1",
+      "releasePublishedAt": "2020-08-19T13:03:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.21.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 534
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.21.1",
+      "releaseName": "Release v4.21.1",
+      "releasePublishedAt": "2020-08-19T13:03:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.21.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 65
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.21.1",
+      "releaseName": "Release v4.21.1",
+      "releasePublishedAt": "2020-08-19T13:03:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.21.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 154
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.2",
+      "releaseName": "Release v4.20.2",
+      "releasePublishedAt": "2020-08-12T16:09:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.2",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 18
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.2",
+      "releaseName": "Release v4.20.2",
+      "releasePublishedAt": "2020-08-12T16:09:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.2",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 25
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.2",
+      "releaseName": "Release v4.20.2",
+      "releasePublishedAt": "2020-08-12T16:09:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.2",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 279
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.2",
+      "releaseName": "Release v4.20.2",
+      "releasePublishedAt": "2020-08-12T16:09:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.2",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 21
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.2",
+      "releaseName": "Release v4.20.2",
+      "releasePublishedAt": "2020-08-12T16:09:58Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.2",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 25
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.1",
+      "releaseName": "Release v4.20.1",
+      "releasePublishedAt": "2020-07-13T19:19:39Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 14
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.0",
+      "releaseName": "Release v4.20.0",
+      "releasePublishedAt": "2020-07-07T10:25:01Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 33
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.0",
+      "releaseName": "Release v4.20.0",
+      "releasePublishedAt": "2020-07-07T10:25:01Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 24
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.0",
+      "releaseName": "Release v4.20.0",
+      "releasePublishedAt": "2020-07-07T10:25:01Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 343
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.0",
+      "releaseName": "Release v4.20.0",
+      "releasePublishedAt": "2020-07-07T10:25:01Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 952
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.0",
+      "releaseName": "Release v4.20.0",
+      "releasePublishedAt": "2020-07-07T10:25:01Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 190
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.20.0",
+      "releaseName": "Release v4.20.0",
+      "releasePublishedAt": "2020-07-07T10:25:01Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.20.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 160
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.1",
+      "releaseName": "Release v4.19.1",
+      "releasePublishedAt": "2020-06-07T10:23:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 27
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.1",
+      "releaseName": "Release v4.19.1",
+      "releasePublishedAt": "2020-06-07T10:23:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 21
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.1",
+      "releaseName": "Release v4.19.1",
+      "releasePublishedAt": "2020-06-07T10:23:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 267
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.1",
+      "releaseName": "Release v4.19.1",
+      "releasePublishedAt": "2020-06-07T10:23:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 502
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.1",
+      "releaseName": "Release v4.19.1",
+      "releasePublishedAt": "2020-06-07T10:23:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 72
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.1",
+      "releaseName": "Release v4.19.1",
+      "releasePublishedAt": "2020-06-07T10:23:08Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 115
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.0",
+      "releaseName": "Release v4.19.0",
+      "releasePublishedAt": "2020-06-03T10:10:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 24
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.0",
+      "releaseName": "Release v4.19.0",
+      "releasePublishedAt": "2020-06-03T10:10:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 24
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.0",
+      "releaseName": "Release v4.19.0",
+      "releasePublishedAt": "2020-06-03T10:10:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 94
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.0",
+      "releaseName": "Release v4.19.0",
+      "releasePublishedAt": "2020-06-03T10:10:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 97
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.0",
+      "releaseName": "Release v4.19.0",
+      "releasePublishedAt": "2020-06-03T10:10:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 34
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.19.0",
+      "releaseName": "Release v4.19.0",
+      "releasePublishedAt": "2020-06-03T10:10:22Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.19.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 55
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.18.0",
+      "releaseName": "Release v4.18.0",
+      "releasePublishedAt": "2020-03-24T12:23:54Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.18.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 39
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.18.0",
+      "releaseName": "Release v4.18.0",
+      "releasePublishedAt": "2020-03-24T12:23:54Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.18.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 22
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.18.0",
+      "releaseName": "Release v4.18.0",
+      "releasePublishedAt": "2020-03-24T12:23:54Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.18.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 577
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.18.0",
+      "releaseName": "Release v4.18.0",
+      "releasePublishedAt": "2020-03-24T12:23:54Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.18.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 1063
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.18.0",
+      "releaseName": "Release v4.18.0",
+      "releasePublishedAt": "2020-03-24T12:23:54Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.18.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 83
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.18.0",
+      "releaseName": "Release v4.18.0",
+      "releasePublishedAt": "2020-03-24T12:23:54Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.18.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 217
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.2",
+      "releaseName": "Release v4.17.2",
+      "releasePublishedAt": "2020-03-03T13:20:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.2",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 22
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.2",
+      "releaseName": "Release v4.17.2",
+      "releasePublishedAt": "2020-03-03T13:20:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.2",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 14
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.2",
+      "releaseName": "Release v4.17.2",
+      "releasePublishedAt": "2020-03-03T13:20:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.2",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 184
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.2",
+      "releaseName": "Release v4.17.2",
+      "releasePublishedAt": "2020-03-03T13:20:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.2",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 292
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.2",
+      "releaseName": "Release v4.17.2",
+      "releasePublishedAt": "2020-03-03T13:20:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.2",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 39
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.2",
+      "releaseName": "Release v4.17.2",
+      "releasePublishedAt": "2020-03-03T13:20:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.2",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 89
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.1",
+      "releaseName": "Release v4.17.1",
+      "releasePublishedAt": "2020-02-20T11:29:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 27
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.1",
+      "releaseName": "Release v4.17.1",
+      "releasePublishedAt": "2020-02-20T11:29:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.1",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 23
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.1",
+      "releaseName": "Release v4.17.1",
+      "releasePublishedAt": "2020-02-20T11:29:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 127
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.1",
+      "releaseName": "Release v4.17.1",
+      "releasePublishedAt": "2020-02-20T11:29:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 199
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.1",
+      "releaseName": "Release v4.17.1",
+      "releasePublishedAt": "2020-02-20T11:29:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 40
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.1",
+      "releaseName": "Release v4.17.1",
+      "releasePublishedAt": "2020-02-20T11:29:29Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 68
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.0",
+      "releaseName": "Release v4.17.0",
+      "releasePublishedAt": "2020-02-17T12:36:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 21
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.0",
+      "releaseName": "Release v4.17.0",
+      "releasePublishedAt": "2020-02-17T12:36:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.0",
+      "platform": "android",
+      "distribution": "apk",
+      "downloadCount": 25
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.0",
+      "releaseName": "Release v4.17.0",
+      "releasePublishedAt": "2020-02-17T12:36:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 43
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.0",
+      "releaseName": "Release v4.17.0",
+      "releasePublishedAt": "2020-02-17T12:36:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 125
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.0",
+      "releaseName": "Release v4.17.0",
+      "releasePublishedAt": "2020-02-17T12:36:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 34
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.17.0",
+      "releaseName": "Release v4.17.0",
+      "releasePublishedAt": "2020-02-17T12:36:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.17.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 39
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.1",
+      "releaseName": "Release v4.16.1",
+      "releasePublishedAt": "2020-01-18T16:54:44Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 43
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.1",
+      "releaseName": "Release v4.16.1",
+      "releasePublishedAt": "2020-01-18T16:54:44Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 212
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.1",
+      "releaseName": "Release v4.16.1",
+      "releasePublishedAt": "2020-01-18T16:54:44Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 457
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.1",
+      "releaseName": "Release v4.16.1",
+      "releasePublishedAt": "2020-01-18T16:54:44Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 59
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.1",
+      "releaseName": "Release v4.16.1",
+      "releasePublishedAt": "2020-01-18T16:54:44Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 113
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.0",
+      "releaseName": "Release v4.16.0",
+      "releasePublishedAt": "2019-12-17T09:58:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 44
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.0",
+      "releaseName": "Release v4.16.0",
+      "releasePublishedAt": "2019-12-17T09:58:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 305
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.0",
+      "releaseName": "Release v4.16.0",
+      "releasePublishedAt": "2019-12-17T09:58:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 1066
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.0",
+      "releaseName": "Release v4.16.0",
+      "releasePublishedAt": "2019-12-17T09:58:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 65
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.16.0",
+      "releaseName": "Release v4.16.0",
+      "releasePublishedAt": "2019-12-17T09:58:38Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.16.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 146
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.15.0",
+      "releaseName": "Release v4.15.0",
+      "releasePublishedAt": "2019-12-05T10:46:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.15.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 39
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.15.0",
+      "releaseName": "Release v4.15.0",
+      "releasePublishedAt": "2019-12-05T10:46:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.15.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 112
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.15.0",
+      "releaseName": "Release v4.15.0",
+      "releasePublishedAt": "2019-12-05T10:46:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.15.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 474
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.15.0",
+      "releaseName": "Release v4.15.0",
+      "releasePublishedAt": "2019-12-05T10:46:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.15.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 46
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.15.0",
+      "releaseName": "Release v4.15.0",
+      "releasePublishedAt": "2019-12-05T10:46:31Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.15.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 83
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.14.1",
+      "releaseName": "Release v4.14.1",
+      "releasePublishedAt": "2019-10-30T10:45:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.14.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 47
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.14.1",
+      "releaseName": "Release v4.14.1",
+      "releasePublishedAt": "2019-10-30T10:45:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.14.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 309
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.14.1",
+      "releaseName": "Release v4.14.1",
+      "releasePublishedAt": "2019-10-30T10:45:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.14.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 682
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.14.1",
+      "releaseName": "Release v4.14.1",
+      "releasePublishedAt": "2019-10-30T10:45:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.14.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 61
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.14.1",
+      "releaseName": "Release v4.14.1",
+      "releasePublishedAt": "2019-10-30T10:45:41Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.14.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 154
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.1",
+      "releaseName": "Release v4.13.1",
+      "releasePublishedAt": "2019-10-01T10:41:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 38
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.1",
+      "releaseName": "Release v4.13.1",
+      "releasePublishedAt": "2019-10-01T10:41:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 248
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.1",
+      "releaseName": "Release v4.13.1",
+      "releasePublishedAt": "2019-10-01T10:41:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 524
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.1",
+      "releaseName": "Release v4.13.1",
+      "releasePublishedAt": "2019-10-01T10:41:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 72
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.1",
+      "releaseName": "Release v4.13.1",
+      "releasePublishedAt": "2019-10-01T10:41:59Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 129
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.0",
+      "releaseName": "Release v4.13.0",
+      "releasePublishedAt": "2019-09-25T11:20:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 23
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.0",
+      "releaseName": "Release v4.13.0",
+      "releasePublishedAt": "2019-09-25T11:20:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 125
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.0",
+      "releaseName": "Release v4.13.0",
+      "releasePublishedAt": "2019-09-25T11:20:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 188
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.0",
+      "releaseName": "Release v4.13.0",
+      "releasePublishedAt": "2019-09-25T11:20:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 41
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.13.0",
+      "releaseName": "Release v4.13.0",
+      "releasePublishedAt": "2019-09-25T11:20:36Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.13.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 57
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.12.0",
+      "releaseName": "Release 4.12.0",
+      "releasePublishedAt": "2019-09-17T13:50:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.12.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 26
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.12.0",
+      "releaseName": "Release 4.12.0",
+      "releasePublishedAt": "2019-09-17T13:50:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.12.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 69
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.12.0",
+      "releaseName": "Release 4.12.0",
+      "releasePublishedAt": "2019-09-17T13:50:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.12.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 149
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.12.0",
+      "releaseName": "Release 4.12.0",
+      "releasePublishedAt": "2019-09-17T13:50:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.12.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 35
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.12.0",
+      "releaseName": "Release 4.12.0",
+      "releasePublishedAt": "2019-09-17T13:50:03Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.12.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 44
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.1",
+      "releaseName": "Release 4.11.1",
+      "releasePublishedAt": "2019-08-21T17:44:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.1",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 48
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.1",
+      "releaseName": "Release 4.11.1",
+      "releasePublishedAt": "2019-08-21T17:44:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.1",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 187
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.1",
+      "releaseName": "Release 4.11.1",
+      "releasePublishedAt": "2019-08-21T17:44:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.1",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 451
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.1",
+      "releaseName": "Release 4.11.1",
+      "releasePublishedAt": "2019-08-21T17:44:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.1",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 52
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.1",
+      "releaseName": "Release 4.11.1",
+      "releasePublishedAt": "2019-08-21T17:44:19Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.1",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 102
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.0",
+      "releaseName": "Release 4.11.0",
+      "releasePublishedAt": "2019-08-14T09:14:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 38
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.0",
+      "releaseName": "Release 4.11.0",
+      "releasePublishedAt": "2019-08-14T09:14:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 128
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.0",
+      "releaseName": "Release 4.11.0",
+      "releasePublishedAt": "2019-08-14T09:14:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 184
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.0",
+      "releaseName": "Release 4.11.0",
+      "releasePublishedAt": "2019-08-14T09:14:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 41
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.11.0",
+      "releaseName": "Release 4.11.0",
+      "releasePublishedAt": "2019-08-14T09:14:27Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.11.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 68
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.10.0",
+      "releaseName": "Release 4.10.0",
+      "releasePublishedAt": "2019-06-28T14:42:12Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.10.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 95
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.10.0",
+      "releaseName": "Release 4.10.0",
+      "releasePublishedAt": "2019-06-28T14:42:12Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.10.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 459
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.10.0",
+      "releaseName": "Release 4.10.0",
+      "releasePublishedAt": "2019-06-28T14:42:12Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.10.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 918
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.10.0",
+      "releaseName": "Release 4.10.0",
+      "releasePublishedAt": "2019-06-28T14:42:12Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.10.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 138
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.10.0",
+      "releaseName": "Release 4.10.0",
+      "releasePublishedAt": "2019-06-28T14:42:12Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.10.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 201
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.9.0",
+      "releaseName": "Release 4.9.0",
+      "releasePublishedAt": "2019-06-13T15:07:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.9.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 41
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.9.0",
+      "releaseName": "Release 4.9.0",
+      "releasePublishedAt": "2019-06-13T15:07:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.9.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 240
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.9.0",
+      "releaseName": "Release 4.9.0",
+      "releasePublishedAt": "2019-06-13T15:07:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.9.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 613
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.9.0",
+      "releaseName": "Release 4.9.0",
+      "releasePublishedAt": "2019-06-13T15:07:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.9.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 58
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.9.0",
+      "releaseName": "Release 4.9.0",
+      "releasePublishedAt": "2019-06-13T15:07:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.9.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 127
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.8.0",
+      "releaseName": "Release 4.8.0",
+      "releasePublishedAt": "2019-06-06T22:35:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.8.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 26
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.8.0",
+      "releaseName": "Release 4.8.0",
+      "releasePublishedAt": "2019-06-06T22:35:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.8.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 75
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.8.0",
+      "releaseName": "Release 4.8.0",
+      "releasePublishedAt": "2019-06-06T22:35:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.8.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 345
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.8.0",
+      "releaseName": "Release 4.8.0",
+      "releasePublishedAt": "2019-06-06T22:35:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.8.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 35
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.8.0",
+      "releaseName": "Release 4.8.0",
+      "releasePublishedAt": "2019-06-06T22:35:32Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.8.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 44
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.7.0",
+      "releaseName": "Release 4.7.0",
+      "releasePublishedAt": "2019-05-10T12:09:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.7.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 31
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.7.0",
+      "releaseName": "Release 4.7.0",
+      "releasePublishedAt": "2019-05-10T12:09:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.7.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 198
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.7.0",
+      "releaseName": "Release 4.7.0",
+      "releasePublishedAt": "2019-05-10T12:09:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.7.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 448
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.7.0",
+      "releaseName": "Release 4.7.0",
+      "releasePublishedAt": "2019-05-10T12:09:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.7.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 63
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.7.0",
+      "releaseName": "Release 4.7.0",
+      "releasePublishedAt": "2019-05-10T12:09:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.7.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 86
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.6.0",
+      "releaseName": "Release 4.6.0",
+      "releasePublishedAt": "2019-03-27T14:07:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.6.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 37
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.6.0",
+      "releaseName": "Release 4.6.0",
+      "releasePublishedAt": "2019-03-27T14:07:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.6.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 310
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.6.0",
+      "releaseName": "Release 4.6.0",
+      "releasePublishedAt": "2019-03-27T14:07:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.6.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 558
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.6.0",
+      "releaseName": "Release 4.6.0",
+      "releasePublishedAt": "2019-03-27T14:07:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.6.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 71
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.6.0",
+      "releaseName": "Release 4.6.0",
+      "releasePublishedAt": "2019-03-27T14:07:05Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.6.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 113
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.5.0",
+      "releaseName": "Release 4.5.0",
+      "releasePublishedAt": "2019-03-04T15:46:16Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.5.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 24
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.5.0",
+      "releaseName": "Release 4.5.0",
+      "releasePublishedAt": "2019-03-04T15:46:16Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.5.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 173
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.5.0",
+      "releaseName": "Release 4.5.0",
+      "releasePublishedAt": "2019-03-04T15:46:16Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.5.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 348
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.5.0",
+      "releaseName": "Release 4.5.0",
+      "releasePublishedAt": "2019-03-04T15:46:16Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.5.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 53
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.5.0",
+      "releaseName": "Release 4.5.0",
+      "releasePublishedAt": "2019-03-04T15:46:16Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.5.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 77
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.4.0",
+      "releaseName": "Release 4.4.0",
+      "releasePublishedAt": "2019-01-18T17:12:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.4.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 39
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.4.0",
+      "releaseName": "Release 4.4.0",
+      "releasePublishedAt": "2019-01-18T17:12:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.4.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 327
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.4.0",
+      "releaseName": "Release 4.4.0",
+      "releasePublishedAt": "2019-01-18T17:12:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.4.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 650
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.4.0",
+      "releaseName": "Release 4.4.0",
+      "releasePublishedAt": "2019-01-18T17:12:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.4.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 62
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.4.0",
+      "releaseName": "Release 4.4.0",
+      "releasePublishedAt": "2019-01-18T17:12:02Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.4.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 140
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.3.0",
+      "releaseName": "Release 4.3.0",
+      "releasePublishedAt": "2018-12-03T17:06:48Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.3.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 49
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.3.0",
+      "releaseName": "Release 4.3.0",
+      "releasePublishedAt": "2018-12-03T17:06:48Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.3.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 342
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.3.0",
+      "releaseName": "Release 4.3.0",
+      "releasePublishedAt": "2018-12-03T17:06:48Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.3.0",
+      "platform": "windows",
+      "distribution": "exe",
+      "downloadCount": 670
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.3.0",
+      "releaseName": "Release 4.3.0",
+      "releasePublishedAt": "2018-12-03T17:06:48Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.3.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 53
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.3.0",
+      "releaseName": "Release 4.3.0",
+      "releasePublishedAt": "2018-12-03T17:06:48Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.3.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 163
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.2.0",
+      "releaseName": "Release 4.2.0",
+      "releasePublishedAt": "2018-11-25T16:16:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.2.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 26
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.2.0",
+      "releaseName": "Release 4.2.0",
+      "releasePublishedAt": "2018-11-25T16:16:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.2.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 96
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.2.0",
+      "releaseName": "Release 4.2.0",
+      "releasePublishedAt": "2018-11-25T16:16:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.2.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 38
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.2.0",
+      "releaseName": "Release 4.2.0",
+      "releasePublishedAt": "2018-11-25T16:16:47Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.2.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 64
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.1.0",
+      "releaseName": "Release 4.1.0",
+      "releasePublishedAt": "2018-08-17T12:21:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.1.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 71
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.1.0",
+      "releaseName": "Release 4.1.0",
+      "releasePublishedAt": "2018-08-17T12:21:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.1.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 608
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.1.0",
+      "releaseName": "Release 4.1.0",
+      "releasePublishedAt": "2018-08-17T12:21:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.1.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 154
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.1.0",
+      "releaseName": "Release 4.1.0",
+      "releasePublishedAt": "2018-08-17T12:21:34Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.1.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 268
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.0.0",
+      "releaseName": "Release 4.0.0",
+      "releasePublishedAt": "2018-08-02T11:59:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.0.0",
+      "platform": "linux",
+      "distribution": "rpm",
+      "downloadCount": 35
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.0.0",
+      "releaseName": "Release 4.0.0",
+      "releasePublishedAt": "2018-08-02T11:59:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.0.0",
+      "platform": "macos",
+      "distribution": "zip",
+      "downloadCount": 280
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.0.0",
+      "releaseName": "Release 4.0.0",
+      "releasePublishedAt": "2018-08-02T11:59:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.0.0",
+      "platform": "linux",
+      "distribution": "appimage",
+      "downloadCount": 58
+    },
+    {
+      "syncedAt": "2026-09-12T10:49:45.103Z",
+      "releaseTag": "v4.0.0",
+      "releaseName": "Release 4.0.0",
+      "releasePublishedAt": "2018-08-02T11:59:17Z",
+      "releaseHtmlUrl": "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/tag/v4.0.0",
+      "platform": "linux",
+      "distribution": "deb",
+      "downloadCount": 85
     }
   ]
 }
