@@ -2,7 +2,7 @@
   "meta": {
     "version": 2,
     "createdAt": "2026-04-14T21:50:32.448Z",
-    "updatedAt": "2026-11-26T03:35:30.873Z",
+    "updatedAt": "2026-11-26T16:56:43.063Z",
     "repo": "BitBoxSwiss/bitbox-wallet-app"
   },
   "syncRuns": [
@@ -9791,6 +9791,13 @@
       "repo": "BitBoxSwiss/bitbox-wallet-app",
       "fetchedReleaseCount": 96,
       "storedAssetSnapshotCount": 447
+    },
+    {
+      "id": "aa504d34-f3f7-4628-8eda-a6ad0f461c9d",
+      "syncedAt": "2026-11-26T16:56:43.063Z",
+      "repo": "BitBoxSwiss/bitbox-wallet-app",
+      "fetchedReleaseCount": 96,
+      "storedAssetSnapshotCount": 447
     }
   ],
   "snapshotFiles": [
@@ -9832,7 +9839,7 @@
     {
       "month": "2026-11",
       "file": "snapshots/2026-11.json",
-      "snapshotCount": 32239
+      "snapshotCount": 32686
     }
   ]
 }
